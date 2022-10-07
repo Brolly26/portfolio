@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Code</title>
-   <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css" type="text/css">
+ <!--  <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="../static/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"type="text/css">
+--!-->
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" type='image/png' href="../static/img/asset-15.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
 </head>
 <body >
   
@@ -44,10 +51,10 @@
             <a class="nav-link" href="#curriculo"> <i class="bi bi-file-earmark-code-fill"></i> Curriculo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">  <i class="bi bi-book-fill"></i> Portfólio</a>
+            <a class="nav-link" href="#portfolio">  <i class="bi bi-book-fill"></i> Portfólio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">  <i class="bi bi-person-lines-fill"></i> Contatos</a>
+            <a class="nav-link" href="#contato">  <i class="bi bi-person-lines-fill"></i> Contatos</a>
           </li>
         
       </ul>
@@ -147,7 +154,7 @@ Idade: <span class="fw-lighter"> 19 anos </span>
 <div class="col-md-6">
  <ul class="list-group list-group fs-5">
   <li class="list-group-item">
-    Hobby: <span class="fw-lighter"> Jogar </span>
+    Hobby: <span class="fw-lighter"> Estudar </span>
 
   </li>
 
@@ -338,13 +345,18 @@ Idade: <span class="fw-lighter"> 19 anos </span>
   <h4>Análise e Desenvolvimento de Sistemas</h4>
   <h5>2021-2022</h5>
   <p><em> SENAI - Serviço Nacional de Aprendizagem Industrial  </em></p>
-  <p> Curso técnico com foco em tecnologia da informação, com carga horária de </p>
-
+  <p> Curso técnico com foco em tecnologia da informação.</p>
 </div>
 
 <div class="cv-item">
+<h4>Intercâmbio Halifax / Nova Scotia</h4>
+<h5>2022-2022</h5>
+<p><em> ECLC - East Coast Language College </em></p>
 
+<p>Level A2-B1</p>
+<p> Curso baseado em aprimorar o aprendizado em Inglês </p>
 </div>
+
 
   </div>
 
@@ -360,9 +372,230 @@ Idade: <span class="fw-lighter"> 19 anos </span>
 
 </section>
 
+<section id="portfolio" class="section-bg mt-5">
+  <div class="container pb-5 pt-5" data-anime="left">
+
+      <h2 class="pb-4">Portfólio</h2>
+
+      <div id="carouselPortfolio" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+
+                  <div class="row row-cols-1 row-cols-md-3 g-4">
+                      <div class="col">
+                          <div class="card ">
+                              <img src="../static/imgs/Fotos dos Projetos/Leagueof.png"
+                              target='_blank'  class="card-img-top img-fluid w-100"
+                                  alt="Plataforma educacional">
+                              <div class="card-body">
+                                  <h5 class="card-title">Tela Login</h5>
+                                  <p class="card-text">Projeto  criado com HTML5 , CSS3 e JavaScript.
+                                 </p>
+                                  <div class="d-flex  justify-content-center">
+                                    <a href="https://github.com/Brolly26/RiotTela"
+                                    target='_blank' class="btn btn-outline-dark me-3"><i
+                                        class="bi bi-github"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col">
+                          <div class="card">
+                              <img src="../static/imgs/Fotos dos Projetos/Eleicao.png" class="card-img-top img-fluid w-100"
+                                  alt="print do blog">
+                              <div class="card-body">
+                                  <h5 class="card-title">Urna Eletrônica</h5>
+                                  <p class="card-text">Projeção de uma urna eletrônica virtual, tecnologias utilizadas: JAVA, MYSQL</p>
+                                  <div class="d-flex justify-content-center">
+                                      <a href="https://github.com/Brolly26/UrnaEletr-nica"
+                                          target='_blank' class="btn btn-outline-dark me-3"><i
+                                              class="bi bi-github"></i></a>
+                                    
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="card">
+                              <img src="../static/imgs/Fotos dos Projetos/pokedex.jpg" class="card-img-top img-fluid w-100"
+                                  alt="print do blog">
+                              <div class="card-body">
+                                  <h5 class="card-title">Pokedéx</h5>
+                                  <p class="card-text">Projeto em Desenvolvimento</p>
+                                  <div class="d-flex justify-content-center">
+                                   
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="carousel-item" data-bs-interval="2000">
+                  <div class="row row-cols-1 row-cols-md-3 g-4">
+                      <div class="col">
+                          <div class="card h-100">
+                              <img src="../static/imgs/Fotos dos Projetos/TelaGra.png" class="card-img-top img-fluid w-100"
+                                  alt="print do blog">
+                              <div class="card-body">
+                                  <h5 class="card-title">Tela Login</h5>
+                                  <p class="card-text">Projeto baseado em uma atividade do meu curso técnico. Tecnologias utilizadas: CSS3, HTML5. </p>
+                                  <div class="d-flex justify-content-center">
+                                      <a href="https://github.com/Brolly26/P-ginaLogin" target='_blank'
+                                          class="btn btn-outline-dark me-3"><i class="bi bi-github"></i></a>
+                                   
+
+                                  </div>
+
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="card h-100">
+                              <img src="../static/imgs/Fotos dos Projetos/Screenshot_1.png" class="card-img-top img-fluid w-100"
+                                  alt="print do blog">
+                              <div class="card-body">
+                                  <h5 class="card-title">Calculadora de IMC</h5>
+                                  <p class="card-text">Este projeto permite você  avaliar o grau de sobrepeso e obesidade. Tecnologias utilizadas: JavaScript, HTML5, CSS3.
+                                    </p>
+                                  <div class="d-flex justify-content-center">
+                                      <a href="https://github.com/Brolly26/Projeto-Calculadora-IMC"
+                                          target='_blank' class="btn btn-outline-dark me-3"><i
+                                              class="bi bi-github"></i></a>
+                                    
+                                  </div>
+
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="card h-100">
+                              <img src="../static/imgs/Fotos dos Projetos/Escolar.png" class="card-img-top img-fluid w-100"
+                                  alt="print do blog">
+                              <div class="card-body">
+                                  <h5 class="card-title">Sistema Academico</h5>
+                                  <p class="card-text">Projeto com objetivo de criação de um sistema escolar. Tecnologias utilizadas: C# e MYSQL</p>
+                                  <div class="d-flex justify-content-center">
+                                      <a href="https://github.com/Brolly26/SistemaAcademico" target='_blank'
+                                          class="btn btn-outline-dark me-3"><i class="bi bi-github"></i></a>
+                                  </div>
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+  </div>
+</section>
+
+<section class="pt-5 pb-5" id="contato">
+
+  <div class="container mb-5">
+<h2 class="pt-3 pb-3">Contato</h2>
+ <div class="row">
+
+
+  <div class="col-md-5">
+<div class="card p-5 shadow border-0">
+  <div class="endereco">
+<h4><i class="bi bi-geo-alt"></i> Localização  </h4>
+<p>Contagem, MG</p>
+    
+  </div>
+
+  <div class="email">
+    <h4><i class="bi bi-envelope"></i> Email</h4>
+<p>bielaugusto8@hotmail.com</p>
+  </div>
+
+  <div class="telefone">
+    <h4><i class="bi bi-phone-vibrate"></i> Telefone</h4>
+<p>+55(31)9 9423-2364</p>
+  </div>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30021.48699896956!2d-44.04596636515233!3d-19.853239981529615!2m3!
+  1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
+  1s0xa693d067914e35%3A0xfb4cd13cf3ab1e07!2sPedra%20Azul%2C%
+  20Contagem%20-%20MG!5e0!3m2!1spt-BR!2sbr!4v1665092579982!5m2!1spt-BR!2sbr" 
+  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+  class="w-100"></iframe>
+
+</div>
+  </div>
+
+
+  <div class="col-md-7">
+<div class="card p-5 h-100 shadow border-0">
+  <form class="row g-3">
+    <div class="col-md-6">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="inputEmail4" 
+        name="nome" placeholder="Digite seu Nome">
+    </div>
+
+
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Digite seu E-mail">
+    </div>
+
+
+    <div class="col-12">
+      <label for="mensagem" class="form-label">Mensagem: </label>
+      <textarea  type= "text" class="form-control" rows="16" 
+      id="mensagem" name="mensagem" placeholder="Digite sua mensagem">  
+        </textarea>
+
+     
+    </div>
+
+
+  
+
+   
+
+  
+   
+    <div class="col-12 d-flex justify-content-center mt-5">
+      <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+    </div>
+  </form>
+
+
+</div>
+
+  </div>
+
+ </div>
+  </div>
+
+</section>
+
+
     </main>
 
-    
+    <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/bootstrap/js/boot"></script> 
     <script src="../static/script.js"></script>
 </body>

@@ -64,6 +64,7 @@ align-items: center;
 color: slategray;
 transition: 0.3s;
 font-size: 15px;
+column-gap: 8px;
 
 }
 
@@ -162,8 +163,6 @@ display: flex;
 
 
 
-
-
 @media (max-width:1024px){
 #header{
 left: -300px;
@@ -186,7 +185,13 @@ margin-left: 0;
 }
 
 }
+.mt-1 {
+    margin-top: 1.25rem !important;
+}
 
+.h-75 {
+    height: 95% !important;
+}
 
 /* Efeito do scroll */
 *::-webkit-scrollbar{
@@ -251,6 +256,38 @@ border-radius: 50%;
 
 }
 
+#carouselPortfolio >  div.carousel-inner > div.carousel-item > .row >.col >.card:hover,
+#carouselPortfolio >  div.carousel-item > div.carousel-item  >.row >.col >#empat > div:hover  {
+    cursor: pointer;
+    background-color: #baadeb !important;
+    border: 1px solid #a595e2;
+    color: white;
+}
+#carouselPortfolio >  div.carousel-inner > div.carousel-item > .row >.col:nth-child(2) >.card:hover {
+background-color: rgb(231, 122, 177) !important;
+}
+#carouselPortfolio >  div.carousel-inner > div.carousel-item > .row >.col:nth-child(3) >.card:hover,
+#carouselPortfolio >  div.carousel-inner > div.carousel-item > .row >.col > .card-login:hover {
+    background-color:  #65c368!important;
+    color: #fff !important;
+    }
+#carouselPortfolio >  div.carousel-inner > div.carousel-item > .row >.col:nth-child(4) >.card:hover {
+    background-color:  #292929 !important;
+    color: #fa7f72 !important;
+    }
+#carouselPortfolio >  div.carousel-inner > div.carousel-item > .row >.col:nth-child(5) >.card:hover {
+    background-color:  #292929!important;
+    color: #fbec5d !important;
+    }
+#carouselPortfolio >  div.carousel-inner > div.carousel-item > .row >.col:nth-child(6) >.card:hover {
+    background-color:  #292929!important;
+    color: #65c368 !important;
+    }
+
+    .row >.col >.card >a.btn:hover{
+        background-color:red !important;
+    }
+
 .carousel-control-prev{
     margin-left: -8rem;
   }
@@ -290,6 +327,5 @@ border-radius: 50%;
     opacity: 1;
     transform: translate3d(0 ,0 ,0);
   }
-  
 
   

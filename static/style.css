@@ -96,7 +96,9 @@ color: slategray;
     margin-left: 300px;
 
 }
-
+.nav-pills{
+ margin-left: 10px;
+}
 
 section#inicio{
     background-image: url(imgs/Fotos\ dos\ Projetos/Caneca.jpg);

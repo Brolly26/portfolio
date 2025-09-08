@@ -23,70 +23,155 @@
   <i class="bi bi-list menu-mobile"></i>
 
   <aside id="header">
+    <!-- Efeito de partículas no fundo -->
+    <div class="sidebar-particles"></div>
+    
     <section class="profile">
-      <img src="../static/imgs/ra.jpg" alt="Foto do Biel">
-      <h1>Gabriel Augusto</h1>
-      <div class="social-links mt-4 text-center">
-        <a target="_blank" href="https://www.linkedin.com/in/gabriel-augusto-86aa031b2/">
+      <div class="profile-img-container">
+        <div class="profile-img-border">
+          <img src="../static/imgs/ra.jpg" alt="Foto do Gabriel">
+        </div>
+      </div>
+      
+      <h1 class="profile-name">Gabriel Augusto</h1>
+      <p class="profile-role">Full Stack Developer</p>
+      
+      <div class="social-links mt-4">
+        <a target="_blank" href="https://www.linkedin.com/in/gabriel-augusto-86aa031b2/" class="social-link linkedin" data-tooltip="LinkedIn">
           <i class="bi bi-linkedin"></i>
         </a>
-
-        <a target="_blank" href="https://github.com/brolly26">
+        <a target="_blank" href="https://github.com/brolly26" class="social-link github" data-tooltip="GitHub">
           <i class="bi bi-github"></i>
         </a>
-
+        <a href="mailto:bielaugusto8@hotmail.com" class="social-link email" data-tooltip="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5531994232364" target="_blank" class="social-link whatsapp" data-tooltip="WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+        </a>
       </div>
     </section>
 
     <nav id="navbar" class="nav-menu">
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#inicio"><i class="bi bi-house-fill"
-              aria-hidden="true"></i>Start</a>
+          <a class="nav-link active" aria-current="page" href="#inicio">
+            <span class="nav-icon"><i class="bi bi-house-door"></i></span>
+            <span class="nav-text">Home</span>
+            <span class="nav-indicator"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#sobre"> <i class="bi bi-person-circle" aria-hidden="true"></i> About </a>
+          <a class="nav-link" href="#sobre">
+            <span class="nav-icon"><i class="bi bi-person"></i></span>
+            <span class="nav-text">About</span>
+            <span class="nav-indicator"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#habilidades"> <i class="bi bi-clipboard-data"></i> Skills </a>
+          <a class="nav-link" href="#habilidades">
+            <span class="nav-icon"><i class="bi bi-gear"></i></span>
+            <span class="nav-text">Skills</span>
+            <span class="nav-indicator"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#curriculo"> <i class="bi bi-file-earmark-code-fill"></i> Curriculo </a>
+          <a class="nav-link" href="#curriculo">
+            <span class="nav-icon"><i class="bi bi-file-earmark-text"></i></span>
+            <span class="nav-text">Resume</span>
+            <span class="nav-indicator"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#portfolio"> <i class="bi bi-book-fill"></i> Portfolio </a>
+          <a class="nav-link" href="#portfolio">
+            <span class="nav-icon"><i class="bi bi-collection"></i></span>
+            <span class="nav-text">Portfolio</span>
+            <span class="nav-indicator"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contato"> <i class="bi bi-person-lines-fill"></i> Contacts </a>
+          <a class="nav-link" href="#contato">
+            <span class="nav-icon"><i class="bi bi-envelope"></i></span>
+            <span class="nav-text">Contact</span>
+            <span class="nav-indicator"></span>
+          </a>
         </li>
-
       </ul>
-
     </nav>
 
+    <!-- Footer do menu -->
+    <div class="sidebar-footer">
+      <p class="copyright">© 2025 Gabriel Augusto</p>
 
+    </div>
 
   </aside>
 
   <main id="main">
 
-    <section id="inicio" class="row m-0 p-0">
+    <section id="inicio" class="row m-0 p-0 position-relative overflow-hidden">
+      <!-- Canvas para animações de fundo -->
+      <canvas id="particles-canvas" class="position-absolute w-100 h-100" style="z-index: 1;"></canvas>
+      
+      <!-- Código animado no fundo -->
+      <div class="code-background position-absolute w-100 h-100" style="z-index: 2;">
+        <pre class="floating-code" id="code1">
+<span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">'Gabriel Augusto'</span>,
+  <span class="property">role</span>: <span class="string">'Full Stack Developer'</span>,
+  <span class="property">skills</span>: [<span class="string">'JavaScript'</span>, <span class="string">'React'</span>, <span class="string">'Node.js'</span>],
+  <span class="property">passion</span>: <span class="string">'Creating amazing experiences'</span>
+};</pre>
+        
+        <pre class="floating-code" id="code2">
+<span class="keyword">async function</span> <span class="function">buildFuture</span>() {
+  <span class="keyword">await</span> <span class="function">learn</span>();
+  <span class="keyword">await</span> <span class="function">code</span>();
+  <span class="keyword">return</span> <span class="function">innovate</span>();
+}</pre>
 
-      <div class="col-md-5 d-flex justify-content-center
-   align-items-center flex-column">
-        <h2 class="text-white text-shadow"> Gabriel Augusto </h2>
-        <span id="subtitle" class="text-white"> Desenvolvedor Full Stack </span>
-
+        <pre class="floating-code" id="code3">
+<span class="keyword">import</span> { <span class="variable">creativity</span> } <span class="keyword">from</span> <span class="string">'./imagination'</span>;
+<span class="keyword">export default</span> <span class="function">createMagic</span>();</pre>
       </div>
 
-      <div class="col-md-7 d-flex  justify-content-end
-  align-items-end ">
-
-        <div id="arraste" class="d-flex align-items-center">
-          <i class="bi bi-arrow-down text-white pe-2 fs-2 " aria-hidden></i>
-          <a href="#sobre">Drag for more</a>
+      <div class="col-md-12 d-flex justify-content-center align-items-center flex-column position-relative" style="z-index: 10; min-height: 100vh;">
+        <!-- Logo JavaScript animado central -->
+        <div class="js-logo-container mb-4">
+          <div class="js-logo">
+            <span class="js-text">JS</span>
+          </div>
+          <div class="orbiting-tech">
+            <div class="tech-icon" style="--delay: 0s;"><i class="bi bi-braces"></i></div>
+            <div class="tech-icon" style="--delay: 1s;"><i class="bi bi-code-slash"></i></div>
+            <div class="tech-icon" style="--delay: 2s;"><i class="bi bi-terminal"></i></div>
+            <div class="tech-icon" style="--delay: 3s;"><i class="bi bi-github"></i></div>
+          </div>
         </div>
+        
+        <h2 class="text-white text-shadow display-3 fw-bold mb-3"> Gabriel Augusto </h2>
+        <div class="typing-container">
+          <span id="subtitle" class="text-white fs-3">
+            <span class="typing-text"></span>
+            <span class="cursor">|</span>
+          </span>
+        </div>
+        
+        <!-- Tags de tecnologia flutuantes -->
+        <div class="tech-tags mt-4">
+          <span class="tech-tag" style="--delay: 0.2s;">React.js</span>
+          <span class="tech-tag" style="--delay: 0.4s;">Next.js</span>
+          <span class="tech-tag" style="--delay: 0.6s;">Node.js</span>
+          <span class="tech-tag" style="--delay: 0.8s;">TypeScript</span>
+          <span class="tech-tag" style="--delay: 1s;">Vue.js</span>
+        </div>
+      </div>
 
+      <div class="position-absolute bottom-0 w-100 text-center pb-4" style="z-index: 10;">
+        <div id="arraste" class="d-inline-flex align-items-center">
+          <i class="bi bi-arrow-down text-white pe-2 fs-2 bounce-animation" aria-hidden></i>
+          <a href="#sobre" class="text-white text-decoration-none">Explore More</a>
+        </div>
       </div>
 
     </section>
@@ -105,84 +190,118 @@
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
-        <section class="container mt-5" id="sobre">
-          <div class="row w-100">
-            <div class="col-md-12">
-              <h2 class="pt-3">About</h2>
-              <p>
-                Hello! My name is Gabriel. At 22 years old, I am a standout Full Stack developer, recognized for my
-                skills
-                and dedication. I am always seeking opportunities to grow and enhance my abilities. With an innovative
-                outlook, I am constantly striving to overcome challenges and positively contribute to creative projects.
-
-              </p>
+        <section class="container mt-5 about-section" id="sobre">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2 class="section-title">About Me</h2>
+              <div class="section-divider mx-auto"></div>
+              <p class="section-subtitle">Passionate about creating innovative digital solutions</p>
             </div>
           </div>
 
-          <div class="row mt-4">
-            <div class="col-md-4">
-              <img class="img-fluid shadow" src="../static/imgs/WhatsApp Image 2022-08-31 at 20.36.49.jpeg"
-                alt="Foto do Biel">
-
-            </div>
-            <div class="col-md-6">
-              <h3> Full Stack Developer </h3>
-              <p> I have experience in creating robust and scalable web applications.
-                Expertise in Next.js, React.js, Vue.js, Node.js, Angular and TypeScript, working on both front-end and back-end.
-                I use Tailwind CSS and Bootstrap 5 to build modern and responsive interfaces, with focus on REST API integration,
-                performance optimization and excellent user experience.
-              </p>
-              <div class="row">
-                <div class="col-md-6">
-                  <ul class="list-group list-group fs-5">
-
-                    <li class="list-group-item">
-                      Birthday: <span class="fw-lighter">November 8, 2002 </span>
-                    </li>
-
-                    <li class="list-group-item">
-                      Age: <span class="fw-lighter"> 22 years old </span>
-                    </li>
-
-                    <li class="list-group-item">
-                      City: <span class="fw-lighter"> Contagem </span>
-
-                    </li>
-
-                    <li class="list-group-item">
-                      State: <span class="fw-lighter"> Minas-Gerais </span>
-
-                    </li>
-
-
-
-                  </ul>
+          <div class="row align-items-center">
+            <div class="col-lg-5 mb-4">
+              <div class="about-img-container">
+                <img class="img-fluid" src="../static/imgs/WhatsApp Image 2022-08-31 at 20.36.49.jpeg" alt="Gabriel Augusto">
+                <div class="about-img-overlay">
+                  <div class="overlay-content">
+                    <h4>Gabriel Augusto</h4>
+                    <p>Full Stack Developer</p>
+                  </div>
                 </div>
-
-                <div class="col-md-6">
-                  <ul class="list-group list-group fs-5">
-                    <li class="list-group-item">
-                      Hobby: <span class="fw-lighter"> Study </span>
-
-                    </li>
-
-                    <li class="list-group-item">
-                      GitHub: <span class="fw-lighter">github.com/brolly26</span>
-
-                    </li>
-
-
-
-                  </ul>
-                </div>
-
               </div>
-
-
             </div>
+            
+            <div class="col-lg-7">
+              <div class="about-content">
+                <h3 class="about-title mb-3">
+                  <span class="gradient-text">Full Stack Developer</span> & Tech Enthusiast
+                </h3>
+                <p class="about-description">
+                  Hello! I'm Gabriel, a 22-year-old Full Stack Developer with a passion for crafting exceptional digital experiences. 
+                  I specialize in building robust, scalable web applications using cutting-edge technologies.
+                </p>
+                
+                <div class="tech-stack-section mt-4 mb-4">
+                  <h5 class="mb-3">My Tech Stack</h5>
+                  <div class="tech-icons">
+                    <div class="tech-item" data-tooltip="React.js">
+                      <i class="bi bi-code-slash"></i> React
+                    </div>
+                    <div class="tech-item" data-tooltip="Node.js">
+                      <i class="bi bi-server"></i> Node
+                    </div>
+                    <div class="tech-item" data-tooltip="TypeScript">
+                      <i class="bi bi-braces"></i> TypeScript
+                    </div>
+                    <div class="tech-item" data-tooltip="Vue.js">
+                      <i class="bi bi-triangle"></i> Vue
+                    </div>
+                    <div class="tech-item" data-tooltip="Database">
+                      <i class="bi bi-database"></i> MySQL
+                    </div>
+                    <div class="tech-item" data-tooltip="Git">
+                      <i class="bi bi-git"></i> Git
+                    </div>
+                  </div>
+                </div>
 
+                <div class="row personal-info">
+                  <div class="col-md-6">
+                    <div class="info-item">
+                      <i class="bi bi-calendar3"></i>
+                      <div>
+                        <strong>Birthday:</strong>
+                        <span>November 8, 2002</span>
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-geo-alt"></i>
+                      <div>
+                        <strong>Location:</strong>
+                        <span>Contagem, MG</span>
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-envelope"></i>
+                      <div>
+                        <strong>Email:</strong>
+                        <span>bielaugusto8@hotmail.com</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="info-item">
+                      <i class="bi bi-phone"></i>
+                      <div>
+                        <strong>Phone:</strong>
+                        <span>+55 (31) 9 9423-2364</span>
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-github"></i>
+                      <div>
+                        <strong>GitHub:</strong>
+                        <span>github.com/brolly26</span>
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-briefcase"></i>
 
+                    </div>
+                  </div>
+                </div>
 
+                <div class="about-buttons mt-4">
+                  <a href="#contato" class="btn btn-gradient">
+                    <i class="bi bi-chat-dots"></i> Get in Touch
+                  </a>
+                  <a href="#portfolio" class="btn btn-outline-gradient">
+                    <i class="bi bi-collection"></i> View Projects
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
 
@@ -377,69 +496,103 @@
 
         <section class="mt-5 cv" id="curriculo">
           <div class="container pb-5">
-            <h2 class="pt-3 pb-4">Curriculum</h2>
             <div class="row">
-              <div class="col-md-6">
-
-                <h3>Education</h3>
-
-
-                <div class="cv-item">
-                  <h4> System Analysis and Development </h4>
-                  <h5> October 2022 - June 2025 </h5>
-                  <p><em> University Estácio de Sá </em></p>
-                  <p> Technology degree - Higher education with a focus on information technology </p>
-                </div>
-
-                <div class="cv-item">
-                  <h4>System Analysis and Development</h4>
-                  <h5> February 2021 - August 2022 </h5>
-                  <p><em> SENAI - National Industrial Apprenticeship Service </em></p>
-                  <p>Technical course focused on information technology.</p>
-                </div>
-
-                <div class="cv-item">
-                  <h4>Exchange to Halifax / Nova Scotia</h4>
-                  <h5> 2022-2022 </h5>
-                  <p><em> ECLC - East Coast Language College </em></p>
-
-                  <p>Level A2-B1</p>
-                  <p> Course focused on improving learning in English </p>
-                </div>
-                <div class="cv-item">
-                  <h4>BOOTCAMP IGTI FRONT-END</h4>
-                  <h5>2021-2021</h5>
-                  <p><em>Currently they have changed the name of the company to: XP Educação </em></p>
-                  <p> BOOTCAMP focused on information technology </p>
-                </div>
-
-
+              <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Resume</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-subtitle">My Professional Journey</p>
               </div>
-
-
-              <div class="col-md-6">
-
-                <h3>Experience</h3>
-
-                <div class="cv-item">
-                  <h4>Full Stack Developer</h4>
-                  <h5>March 2025 - Present</h5>
-                  <p><em>Working as a Full Stack developer with Next.js, Vue.js, Node.js, Sequelize, MySQL, DBeaver, FTP, and AWS in the development and maintenance of web applications.</em></p>
-                  <p>Clube Certo</p>
-                </div>
-
-                <div class="cv-item">
-                  <h4>Front-end Developer</h4>
-                  <h5>February 2023 - February 2025</h5>
-                  <p><em>Worked as a front-end developer creating web systems and responsive, accessible interfaces, including the IPSEMG website, one of the main public hospitals in Minas Gerais.</em></p>
-                  <p>PRODEMGE - Information Technology Company of the State of Minas Gerais</p>
-                </div>
-
-
-              </div>
-
             </div>
 
+            <div class="timeline">
+              <!-- Experience Section -->
+              <div class="text-center mb-4">
+                <h3 class="gradient-text">Professional Experience</h3>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">March 2025 - Present</span>
+                  <h4><i class="bi bi-briefcase"></i> Full Stack Developer</h4>
+                  <h5 class="text-primary">Clube Certo</h5>
+                  <p>Working as a Full Stack developer with cutting-edge technologies including Next.js, Vue.js, Node.js, Sequelize, MySQL, and AWS. Responsible for developing and maintaining scalable web applications with focus on performance and user experience.</p>
+                  <div class="mt-2">
+                    <span class="badge bg-primary me-1">Next.js</span>
+                    <span class="badge bg-success me-1">Vue.js</span>
+                    <span class="badge bg-warning text-dark me-1">Node.js</span>
+                    <span class="badge bg-info text-dark">AWS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">February 2023 - February 2025</span>
+                  <h4><i class="bi bi-code-square"></i> Front-end Developer</h4>
+                  <h5 class="text-primary">PRODEMGE</h5>
+                  <p>Developed responsive and accessible web systems for the State of Minas Gerais IT Company. Key achievement: Created the IPSEMG website, serving one of the main public hospitals in the state.</p>
+                  <div class="mt-2">
+                    <span class="badge bg-danger me-1">Angular</span>
+                    <span class="badge bg-primary me-1">TypeScript</span>
+                    <span class="badge bg-info text-dark">Accessibility</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education Section -->
+              <div class="text-center my-5">
+                <h3 class="gradient-text">Education</h3>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">October 2022 - June 2025</span>
+                  <h4><i class="bi bi-mortarboard"></i> System Analysis and Development</h4>
+                  <h5 class="text-primary">University Estácio de Sá</h5>
+                  <p>Technology degree with comprehensive focus on software development, databases, and modern web technologies.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">February 2021 - August 2022</span>
+                  <h4><i class="bi bi-award"></i> Technical Course in Systems</h4>
+                  <h5 class="text-primary">SENAI</h5>
+                  <p>Intensive technical training in programming, database management, and software development methodologies.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2022</span>
+                  <h4><i class="bi bi-globe"></i> International Exchange</h4>
+                  <h5 class="text-primary">ECLC - Halifax, Canada</h5>
+                  <p>English language immersion program achieving B1 level proficiency. Enhanced communication skills for international collaboration.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2021</span>
+                  <h4><i class="bi bi-laptop"></i> Front-End Bootcamp</h4>
+                  <h5 class="text-primary">XP Educação (formerly IGTI)</h5>
+                  <p>Intensive bootcamp focused on modern front-end technologies, frameworks, and best practices.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-5">
+              <a href="#" class="btn btn-gradient">
+                <i class="bi bi-download"></i> Download CV
+              </a>
+            </div>
+          </div>
         </section>
 
         <section id="portfolio" class="section-bg mt-5">
@@ -447,6 +600,43 @@
 
             <h2 class="pb-4">Portfolio</h2>
 
+            <!-- Projeto Destaque -->
+            <div class="row mb-5">
+              <div class="col-12">
+                <div class="card shadow-lg border-0 overflow-hidden" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                  <div class="row g-0">
+                    <div class="col-md-7">
+                      <img src="../static/imgs/Fotos dos Projetos/emergcare.png" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 400px;" alt="EmergCare Platform">
+                    </div>
+                    <div class="col-md-5">
+                      <div class="card-body text-white p-5">
+                        <span class="badge bg-warning text-dark mb-2">⭐ Featured Project</span>
+                        <h3 class="card-title fw-bold mb-3">EmergCare - Healthcare Platform</h3>
+                        <p class="card-text mb-4">A comprehensive healthcare management system built with modern technologies. Features include patient registration, appointment scheduling, medical records management, and real-time emergency care coordination.</p>
+                        <div class="mb-4">
+                          <span class="badge bg-light text-dark me-2">Next.js</span>
+                          <span class="badge bg-light text-dark me-2">React</span>
+                          <span class="badge bg-light text-dark me-2">TypeScript</span>
+                          <span class="badge bg-light text-dark me-2">Node.js</span>
+                          <span class="badge bg-light text-dark me-2">MySQL</span>
+                        </div>
+                        <div class="d-flex gap-3">
+                          <a href="https://emerg-care-frontend.vercel.app/" target="_blank" class="btn btn-light btn-lg">
+                            <i class="bi bi-globe2"></i> Live Demo
+                          </a>
+                          <a href="https://github.com/Brolly26/emergcare" target="_blank" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-github"></i> Code
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Other Projects -->
+            <h3 class="mb-4">Other Projects</h3>
             <div id="carouselPortfolio" class="carousel carousel-dark slide" data-bs-ride="carousel">
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active"
@@ -458,32 +648,48 @@
                 <div class="carousel-item active" data-bs-interval="10000">
                   <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
-                      <div class="card h-100 card-login">
-                        <img src="../static/imgs/Fotos dos Projetos/Leagueof.png" target='_blank'
-                          class="card-img-top img-fluid w-100" alt="Plataforma educacional">
-                        <div class="card-body">
-                          <h5 class="card-title">Tela Login</h5>
-                          <p class="card-text">Projeto criado com <span class="badge bg-primary">HTML5</span>, <span
-                              class="badge bg-info">CSS3</span> e <span class="badge bg-warning">JavaScript</span>.
-                          </p>
-                          <div class="d-flex justify-content-center">
-                            <a href="https://github.com/Brolly26/RiotTela" target='_blank'
-                              class="btn btn-outline-dark me-3"><i class="bi bi-github"></i></a>
+                      <div class="card h-100 shadow-sm border-0">
+                        <div class="position-relative overflow-hidden" style="height: 200px;">
+                          <img src="../static/imgs/Fotos dos Projetos/Leagueof.png" class="card-img-top img-fluid w-100 h-100" style="object-fit: cover;" alt="Login Screen">
+                          <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-dark"><i class="bi bi-shield-lock"></i> Auth</span>
+                          </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                          <h5 class="card-title fw-bold"><i class="bi bi-box-arrow-in-right text-primary"></i> Tela Login</h5>
+                          <p class="card-text flex-grow-1">Interface de autenticação moderna inspirada no design do League of Legends.</p>
+                          <div class="mb-3">
+                            <span class="badge bg-primary me-1">HTML5</span>
+                            <span class="badge bg-info text-dark me-1">CSS3</span>
+                            <span class="badge bg-warning text-dark">JavaScript</span>
+                          </div>
+                          <div class="d-flex justify-content-center gap-2">
+                            <a href="https://github.com/Brolly26/RiotTela" target='_blank' class="btn btn-outline-dark">
+                              <i class="bi bi-github"></i> Ver Código
+                            </a>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <div class="col">
-                      <div class="card h-100 card-mundoroxo" id="empat">
-                        <img src="../static/imgs/Fotos dos Projetos/MundoRoxo.png" class="card-img-top img-fluid w-100"
-                          alt="print do blog">
-                        <div class="card-body">
-                          <h5 class="card-title">Mundo Roxo</h5>
-                          <p class="card-text">Projeto em Desenvolvimento</p>
-                          <div class="d-flex justify-content-center">
-                            <a href="https://github.com/Brolly26/WorldX" target='_blank'
-                              class="btn btn-outline-dark me-3 magic-link"><i class="bi bi-github"></i></a>
+                      <div class="card h-100 shadow-sm border-0">
+                        <div class="position-relative overflow-hidden" style="height: 200px;">
+                          <img src="../static/imgs/Fotos dos Projetos/MundoRoxo.png" class="card-img-top img-fluid w-100 h-100" style="object-fit: cover;" alt="Mundo Roxo">
+                          <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-purple" style="background-color: #764ba2;"><i class="bi bi-code-slash"></i> Em Progresso</span>
+                          </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                          <h5 class="card-title fw-bold"><i class="bi bi-globe text-purple" style="color: #764ba2;"></i> Mundo Roxo</h5>
+                          <p class="card-text flex-grow-1">Plataforma web inovadora atualmente em desenvolvimento com recursos modernos.</p>
+                          <div class="mb-3">
+                            <span class="badge bg-secondary">Em Breve</span>
+                          </div>
+                          <div class="d-flex justify-content-center gap-2">
+                            <a href="https://github.com/Brolly26/WorldX" target='_blank' class="btn btn-outline-dark">
+                              <i class="bi bi-github"></i> Ver Progresso
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -635,9 +841,15 @@
 
 
         <section class="pt-5 pb-5" id="contato">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-subtitle">Let's work together on your next project</p>
+              </div>
+            </div>
 
-          <div class="container mb-5">
-            <h2 class="pt-3 pb-3">Contact</h2>
             <div class="row">
 
 
@@ -720,54 +932,112 @@
 
       <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
-        <section class="container mt-5" id="sobre">
-          <div class="row w-100">
-            <div class="col-md-12">
-              <h2 class="pt-3">Sobre</h2>
-              <p>
-                Olá! Meu nome é Gabriel. Com 22 anos, sou um destaque como desenvolvedor Full Stack, reconhecido por minhas habilidades e dedicação. Estou sempre em busca de oportunidades para crescer e aprimorar minhas habilidades. Com uma perspectiva inovadora, estou constantemente buscando superar desafios e contribuir de forma positiva para projetos criativos.
-              </p>
+        <section class="container mt-5 about-section" id="sobre">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2 class="section-title">Sobre Mim</h2>
+              <div class="section-divider mx-auto"></div>
+              <p class="section-subtitle">Apaixonado por criar soluções digitais inovadoras</p>
             </div>
           </div>
-        
-          <div class="row mt-4">
-            <div class="col-md-4">
-              <img class="img-fluid shadow" src="../static/imgs/WhatsApp Image 2022-08-31 at 20.36.49.jpeg"
-                alt="Foto do Biel">
-            </div>
-            <div class="col-md-6">
-              <h3> Desenvolvedor Full Stack </h3>
-              <p> Tenho experiência na criação de aplicações web robustas e escaláveis.
-                Domínio em Next.js, React.js, Vue.js, Node.js, Angular e TypeScript, atuando no front-end e back-end.
-                Utilizo Tailwind CSS e Bootstrap 5 para construir interfaces modernas e responsivas, com foco em integração de APIs REST,
-                otimização de performance e excelente experiência do usuário.
-              </p>
-              <div class="row">
-                <div class="col-md-6">
-                  <ul class="list-group list-group fs-5">
-                    <li class="list-group-item">
-                      Aniversário: <span class="fw-lighter">8 de Novembro de 2002 </span>
-                    </li>
-                    <li class="list-group-item">
-                      Idade: <span class="fw-lighter"> 22 anos </span>
-                    </li>
-                    <li class="list-group-item">
-                      Cidade: <span class="fw-lighter"> Contagem </span>
-                    </li>
-                    <li class="list-group-item">
-                      Estado: <span class="fw-lighter"> Minas Gerais </span>
-                    </li>
-                  </ul>
+
+          <div class="row align-items-center">
+            <div class="col-lg-5 mb-4">
+              <div class="about-img-container">
+                <img class="img-fluid" src="../static/imgs/WhatsApp Image 2022-08-31 at 20.36.49.jpeg" alt="Gabriel Augusto">
+                <div class="about-img-overlay">
+                  <div class="overlay-content">
+                    <h4>Gabriel Augusto</h4>
+                    <p>Desenvolvedor Full Stack</p>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <ul class="list-group list-group fs-5">
-                    <li class="list-group-item">
-                      Hobby: <span class="fw-lighter"> Estudar </span>
-                    </li>
-                    <li class="list-group-item">
-                      GitHub: <span class="fw-lighter">github.com/brolly26</span>
-                    </li>
-                  </ul>
+              </div>
+            </div>
+            
+            <div class="col-lg-7">
+              <div class="about-content">
+                <h3 class="about-title mb-3">
+                  <span class="gradient-text">Desenvolvedor Full Stack</span> & Entusiasta de Tecnologia
+                </h3>
+                <p class="about-description">
+                  Olá! Sou Gabriel, um desenvolvedor Full Stack de 22 anos com paixão por criar experiências digitais excepcionais. 
+                  Especializo-me em construir aplicações web robustas e escaláveis usando tecnologias de ponta.
+                </p>
+                
+                <div class="tech-stack-section mt-4 mb-4">
+                  <h5 class="mb-3">Minhas Tecnologias</h5>
+                  <div class="tech-icons">
+                    <div class="tech-item" data-tooltip="React.js">
+                      <i class="bi bi-code-slash"></i> React
+                    </div>
+                    <div class="tech-item" data-tooltip="Node.js">
+                      <i class="bi bi-server"></i> Node
+                    </div>
+                    <div class="tech-item" data-tooltip="TypeScript">
+                      <i class="bi bi-braces"></i> TypeScript
+                    </div>
+                    <div class="tech-item" data-tooltip="Vue.js">
+                      <i class="bi bi-triangle"></i> Vue
+                    </div>
+                    <div class="tech-item" data-tooltip="Database">
+                      <i class="bi bi-database"></i> MySQL
+                    </div>
+                    <div class="tech-item" data-tooltip="Git">
+                      <i class="bi bi-git"></i> Git
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row personal-info">
+                  <div class="col-md-6">
+                    <div class="info-item">
+                      <i class="bi bi-calendar3"></i>
+                      <div>
+                        <strong>Aniversário:</strong>
+                        <span>8 de Novembro de 2002</span>
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-geo-alt"></i>
+                      <div>
+                        <strong>Localização:</strong>
+                        <span>Contagem, MG</span>
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-envelope"></i>
+                      <div>
+                        <strong>Email:</strong>
+                        <span>bielaugusto8@hotmail.com</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="info-item">
+                      <i class="bi bi-phone"></i>
+                      <div>
+                        <strong>Telefone:</strong>
+                        <span>+55 (31) 9 9423-2364</span>
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-github"></i>
+                      <div>
+                        <strong>GitHub:</strong>
+                        <span>github.com/brolly26</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="about-buttons mt-4">
+                  <a href="#contato" class="btn btn-gradient">
+                    <i class="bi bi-chat-dots"></i> Entre em Contato
+                  </a>
+                  <a href="#portfolio" class="btn btn-outline-gradient">
+                    <i class="bi bi-collection"></i> Ver Projetos
+                  </a>
                 </div>
               </div>
             </div>
@@ -890,51 +1160,100 @@
 
         <section class="mt-5 cv" id="curriculo">
           <div class="container pb-5">
-            <h2 class="pt-3 pb-4">Currículo</h2>
             <div class="row">
-              <div class="col-md-6">
-                <h3>Educação</h3>
-                <div class="cv-item">
-                  <h4>Análise e Desenvolvimento de Sistemas</h4>
-                  <h5>Outubro 2022 - Junho 2025</h5>
-                  <p><em>Universidade Estácio de Sá</em></p>
-                  <p>Curso Tecnólogo - Ensino superior com foco em tecnologia da informação</p>
-                </div>
-                <div class="cv-item">
-                  <h4>Análise e Desenvolvimento de Sistemas</h4>
-                  <h5>Fevereiro 2021 - Agosto 2022</h5>
-                  <p><em>SENAI - Serviço Nacional de Aprendizagem Industrial</em></p>
-                  <p>Curso técnico com foco em tecnologia da informação</p>
-                </div>
-                <div class="cv-item">
-                  <h4>Intercâmbio para Halifax / Nova Escócia</h4>
-                  <h5>2022-2022</h5>
-                  <p><em>ECLC - East Coast Language College</em></p>
-                  <p>Nível A2-B1</p>
-                  <p>Curso focado em aprimorar o aprendizado em inglês</p>
-                </div>
-                <div class="cv-item">
-                  <h4>BOOTCAMP IGTI FRONT-END</h4>
-                  <h5>2021-2021</h5>
-                  <p><em>Atualmente mudaram o nome da empresa para: XP Educação</em></p>
-                  <p>BOOTCAMP focado em tecnologia da informação</p>
+              <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Currículo</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-subtitle">Minha Jornada Profissional</p>
+              </div>
+            </div>
+            <div class="timeline">
+              <!-- Seção de Experiência -->
+              <div class="text-center mb-4">
+                <h3 class="gradient-text">Experiência Profissional</h3>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">Março 2025 - Presente</span>
+                  <h4><i class="bi bi-briefcase"></i> Desenvolvedor Full Stack</h4>
+                  <h5 class="text-primary">Clube Certo</h5>
+                  <p>Atuando como desenvolvedor Full Stack com tecnologias de ponta incluindo Next.js, Vue.js, Node.js, Sequelize, MySQL e AWS. Responsável pelo desenvolvimento e manutenção de aplicações web escaláveis com foco em performance e experiência do usuário.</p>
+                  <div class="mt-2">
+                    <span class="badge bg-primary me-1">Next.js</span>
+                    <span class="badge bg-success me-1">Vue.js</span>
+                    <span class="badge bg-warning text-dark me-1">Node.js</span>
+                    <span class="badge bg-info text-dark">AWS</span>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-6">
-                <h3>Experiência</h3>
-                <div class="cv-item">
-                  <h4>Desenvolvedor Full Stack</h4>
-                  <h5>Março 2025 - Atualmente</h5>
-                  <p><em>Atuo como desenvolvedor Full Stack com Next.js, Vue.js, Node.js, Sequelize, MySQL, DBeaver, FTP e AWS no desenvolvimento e manutenção de aplicações web.</em></p>
-                  <p>Clube Certo</p>
-                </div>
-                <div class="cv-item">
-                  <h4>Desenvolvedor Front-end</h4>
-                  <h5>Fevereiro 2023 - Fevereiro 2025</h5>
-                  <p><em>Atuei como desenvolvedor front-end criando sistemas web e interfaces responsivas e acessíveis, incluindo o site do IPSEMG, um dos principais hospitais públicos de Minas Gerais.</em></p>
-                  <p>PRODEMGE - Empresa de Tecnologia da Informação do Estado de Minas Gerais</p>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">Fevereiro 2023 - Fevereiro 2025</span>
+                  <h4><i class="bi bi-code-square"></i> Desenvolvedor Front-end</h4>
+                  <h5 class="text-primary">PRODEMGE</h5>
+                  <p>Desenvolvi sistemas web responsivos e acessíveis para a Empresa de TI do Estado de Minas Gerais. Conquista principal: Criei o site do IPSEMG, atendendo um dos principais hospitais públicos do estado.</p>
+                  <div class="mt-2">
+                    <span class="badge bg-danger me-1">Angular</span>
+                    <span class="badge bg-primary me-1">TypeScript</span>
+                    <span class="badge bg-info text-dark">Acessibilidade</span>
+                  </div>
                 </div>
               </div>
+              
+              <!-- Seção de Educação -->
+              <div class="text-center my-5">
+                <h3 class="gradient-text">Educação</h3>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">Outubro 2022 - Junho 2025</span>
+                  <h4><i class="bi bi-mortarboard"></i> Análise e Desenvolvimento de Sistemas</h4>
+                  <h5 class="text-primary">Universidade Estácio de Sá</h5>
+                  <p>Graduação tecnológica com foco abrangente em desenvolvimento de software, bancos de dados e tecnologias web modernas.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">Fevereiro 2021 - Agosto 2022</span>
+                  <h4><i class="bi bi-award"></i> Curso Técnico em Sistemas</h4>
+                  <h5 class="text-primary">SENAI</h5>
+                  <p>Formação técnica intensiva em programação, gerenciamento de banco de dados e metodologias de desenvolvimento de software.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2022</span>
+                  <h4><i class="bi bi-globe"></i> Intercâmbio Internacional</h4>
+                  <h5 class="text-primary">ECLC - Halifax, Canadá</h5>
+                  <p>Programa de imersão em língua inglesa alcançando proficiência nível B1. Aprimoramento das habilidades de comunicação para colaboração internacional.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2021</span>
+                  <h4><i class="bi bi-laptop"></i> Bootcamp Front-End</h4>
+                  <h5 class="text-primary">XP Educação (antiga IGTI)</h5>
+                  <p>Bootcamp intensivo focado em tecnologias front-end modernas, frameworks e melhores práticas.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-center mt-5">
+              <a href="#" class="btn btn-gradient">
+                <i class="bi bi-download"></i> Baixar CV
+              </a>
             </div>
           </div>
         </section>
@@ -942,8 +1261,45 @@
         <section id="portfolio" class="section-bg mt-5">
           <div class="container pb-5 pt-5" data-anime="left">
 
-            <h2 class="pb-4">Portfolio</h2>
+            <h2 class="pb-4">Portfólio</h2>
 
+            <!-- Projeto Destaque -->
+            <div class="row mb-5">
+              <div class="col-12">
+                <div class="card shadow-lg border-0 overflow-hidden" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                  <div class="row g-0">
+                    <div class="col-md-7">
+                      <img src="../static/imgs/Fotos dos Projetos/emergcare.png" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 400px;" alt="Plataforma EmergCare">
+                    </div>
+                    <div class="col-md-5">
+                      <div class="card-body text-white p-5">
+                        <span class="badge bg-warning text-dark mb-2">⭐ Projeto Destaque</span>
+                        <h3 class="card-title fw-bold mb-3">EmergCare - Plataforma de Saúde</h3>
+                        <p class="card-text mb-4">Sistema completo de gestão de saúde construído com tecnologias modernas. Recursos incluem registro de pacientes, agendamento de consultas, gerenciamento de prontuários médicos e coordenação de atendimento de emergência em tempo real.</p>
+                        <div class="mb-4">
+                          <span class="badge bg-light text-dark me-2">Next.js</span>
+                          <span class="badge bg-light text-dark me-2">React</span>
+                          <span class="badge bg-light text-dark me-2">TypeScript</span>
+                          <span class="badge bg-light text-dark me-2">Node.js</span>
+                          <span class="badge bg-light text-dark me-2">MySQL</span>
+                        </div>
+                        <div class="d-flex gap-3">
+                          <a href="https://emerg-care-frontend.vercel.app/" target="_blank" class="btn btn-light btn-lg">
+                            <i class="bi bi-globe2"></i> Ver Projeto
+                          </a>
+                          <a href="https://github.com/Brolly26/emergcare" target="_blank" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-github"></i> Código
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Outros Projetos -->
+            <h3 class="mb-4">Outros Projetos</h3>
             <div id="carouselPortfolio" class="carousel carousel-dark slide" data-bs-ride="carousel">
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active"
@@ -955,32 +1311,48 @@
                 <div class="carousel-item active" data-bs-interval="10000">
                   <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
-                      <div class="card h-100 card-login">
-                        <img src="../static/imgs/Fotos dos Projetos/Leagueof.png" target='_blank'
-                          class="card-img-top img-fluid w-100" alt="Plataforma educacional">
-                        <div class="card-body">
-                          <h5 class="card-title">Tela Login</h5>
-                          <p class="card-text">Projeto criado com <span class="badge bg-primary">HTML5</span>, <span
-                              class="badge bg-info">CSS3</span> e <span class="badge bg-warning">JavaScript</span>.
-                          </p>
-                          <div class="d-flex justify-content-center">
-                            <a href="https://github.com/Brolly26/RiotTela" target='_blank'
-                              class="btn btn-outline-dark me-3"><i class="bi bi-github"></i></a>
+                      <div class="card h-100 shadow-sm border-0">
+                        <div class="position-relative overflow-hidden" style="height: 200px;">
+                          <img src="../static/imgs/Fotos dos Projetos/Leagueof.png" class="card-img-top img-fluid w-100 h-100" style="object-fit: cover;" alt="Login Screen">
+                          <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-dark"><i class="bi bi-shield-lock"></i> Auth</span>
+                          </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                          <h5 class="card-title fw-bold"><i class="bi bi-box-arrow-in-right text-primary"></i> Tela Login</h5>
+                          <p class="card-text flex-grow-1">Interface de autenticação moderna inspirada no design do League of Legends.</p>
+                          <div class="mb-3">
+                            <span class="badge bg-primary me-1">HTML5</span>
+                            <span class="badge bg-info text-dark me-1">CSS3</span>
+                            <span class="badge bg-warning text-dark">JavaScript</span>
+                          </div>
+                          <div class="d-flex justify-content-center gap-2">
+                            <a href="https://github.com/Brolly26/RiotTela" target='_blank' class="btn btn-outline-dark">
+                              <i class="bi bi-github"></i> Ver Código
+                            </a>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <div class="col">
-                      <div class="card h-100 card-mundoroxo" id="empat">
-                        <img src="../static/imgs/Fotos dos Projetos/MundoRoxo.png" class="card-img-top img-fluid w-100"
-                          alt="print do blog">
-                        <div class="card-body">
-                          <h5 class="card-title">Mundo Roxo</h5>
-                          <p class="card-text">Projeto em Desenvolvimento</p>
-                          <div class="d-flex justify-content-center">
-                            <a href="https://github.com/Brolly26/WorldX" target='_blank'
-                              class="btn btn-outline-dark me-3 magic-link"><i class="bi bi-github"></i></a>
+                      <div class="card h-100 shadow-sm border-0">
+                        <div class="position-relative overflow-hidden" style="height: 200px;">
+                          <img src="../static/imgs/Fotos dos Projetos/MundoRoxo.png" class="card-img-top img-fluid w-100 h-100" style="object-fit: cover;" alt="Mundo Roxo">
+                          <div class="position-absolute top-0 end-0 m-2">
+                            <span class="badge bg-purple" style="background-color: #764ba2;"><i class="bi bi-code-slash"></i> Em Progresso</span>
+                          </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                          <h5 class="card-title fw-bold"><i class="bi bi-globe text-purple" style="color: #764ba2;"></i> Mundo Roxo</h5>
+                          <p class="card-text flex-grow-1">Plataforma web inovadora atualmente em desenvolvimento com recursos modernos.</p>
+                          <div class="mb-3">
+                            <span class="badge bg-secondary">Em Breve</span>
+                          </div>
+                          <div class="d-flex justify-content-center gap-2">
+                            <a href="https://github.com/Brolly26/WorldX" target='_blank' class="btn btn-outline-dark">
+                              <i class="bi bi-github"></i> Ver Progresso
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -1135,77 +1507,158 @@
 
 
         <section class="pt-5 pb-5" id="contato">
-
-          <div class="container mb-5">
-            <h2 class="pt-3 pb-3">Contato</h2>
+          <div class="container">
             <div class="row">
+              <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-subtitle">Vamos trabalhar juntos no seu próximo projeto</p>
+              </div>
+            </div>
 
-
+            <div class="row">
               <div class="col-md-5">
-                <div class="card p-5 shadow border-0">
-                  <div class="endereco">
-                    <h4><i class="bi bi-geo-alt"></i> Localização </h4>
-                    <p>Contagem, MG</p>
-
+                <div class="contact-info-card">
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div class="contact-details">
+                      <h5>Localização</h5>
+                      <p>Contagem, MG - Brasil</p>
+                    </div>
                   </div>
 
-                  <div class="email">
-                    <h4><i class="bi bi-envelope"></i> Email</h4>
-                    <p>bielaugusto8@hotmail.com</p>
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <div class="contact-details">
+                      <h5>Email</h5>
+                      <p>bielaugusto8@hotmail.com</p>
+                    </div>
                   </div>
 
-                  <div class="telefone">
-                    <h4><i class="bi bi-phone-vibrate"></i> Telefo</h4>
-                    <p>+55(31)9 9423-2364</p>
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="bi bi-phone-vibrate-fill"></i>
+                    </div>
+                    <div class="contact-details">
+                      <h5>Telefone</h5>
+                      <p>+55 (31) 9 9423-2364</p>
+                    </div>
                   </div>
 
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30021.48699896956!2d-44.04596636515233!3d-19.853239981529615!2m3!
-  1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
-  1s0xa693d067914e35%3A0xfb4cd13cf3ab1e07!2sPedra%20Azul%2C%
-  20Contagem%20-%20MG!5e0!3m2!1spt-BR!2sbr!4v1665092579982!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                    class="w-100"></iframe>
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="bi bi-clock-fill"></i>
+                    </div>
+                    <div class="contact-details">
+                      <h5>Disponibilidade</h5>
+                      <p>Seg - Sex: 9:00 - 18:00</p>
+                    </div>
+                  </div>
 
+                  <div class="map-container mt-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30021.48699896956!2d-44.04596636515233!3d-19.853239981529615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa693d067914e35%3A0xfb4cd13cf3ab1e07!2sPedra%20Azul%2C%20Contagem%20-%20MG!5e0!3m2!1spt-BR!2sbr!4v1665092579982!5m2!1spt-BR!2sbr" 
+                      width="100%" 
+                      height="250" 
+                      style="border:0; border-radius: 15px;" 
+                      allowfullscreen="" 
+                      loading="lazy" 
+                      referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                  </div>
                 </div>
               </div>
 
-
               <div class="col-md-7">
-                <div class="card p-5 h-100 shadow border-0">
-                  <form class="row g-3">
-                    <div class="col-md-6">
-                      <label for="nome" class="form-label">Nome</label>
-                      <input type="text" class="form-control" id="inputEmail4" name="nome"
-                        placeholder="Digite seu Nome">
-                    </div>
+                <div class="contact-form-card">
+                  <h4 class="mb-4">Envie sua Mensagem</h4>
+                  <form class="contact-form" action="/send" method="POST">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="nome" class="form-label">
+                            <i class="bi bi-person"></i> Nome Completo
+                          </label>
+                          <input type="text" 
+                            class="form-control form-control-lg" 
+                            id="nome" 
+                            name="nome"
+                            placeholder="Seu nome completo" 
+                            required>
+                        </div>
+                      </div>
 
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="email" class="form-label">
+                            <i class="bi bi-envelope"></i> Email
+                          </label>
+                          <input type="email" 
+                            class="form-control form-control-lg" 
+                            id="email" 
+                            name="email"
+                            placeholder="seu@email.com" 
+                            required>
+                        </div>
+                      </div>
 
-                    <div class="col-md-6">
-                      <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" placeholder="Digite seu E-mail">
-                    </div>
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="assunto" class="form-label">
+                            <i class="bi bi-chat-text"></i> Assunto
+                          </label>
+                          <input type="text" 
+                            class="form-control form-control-lg" 
+                            id="assunto" 
+                            name="assunto"
+                            placeholder="Sobre o que você quer falar?" 
+                            required>
+                        </div>
+                      </div>
 
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="mensagem" class="form-label">
+                            <i class="bi bi-pencil-square"></i> Mensagem
+                          </label>
+                          <textarea class="form-control form-control-lg" 
+                            id="mensagem" 
+                            name="mensagem"
+                            rows="8" 
+                            placeholder="Conte-me mais sobre seu projeto..."
+                            required></textarea>
+                        </div>
+                      </div>
 
-                    <div class="col-12">
-                      <label for="mensagem" class="form-label">Mensagem: </label>
-                      <textarea type="text" class="form-control" rows="16" id="mensagem" name="mensagem"
-                        placeholder="Digite sua mensagem">
-        </textarea>
-
-                    </div>
-                    <div class="col-12 d-flex justify-content-center mt-5">
-                      <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-gradient btn-lg w-100">
+                          <i class="bi bi-send"></i> Enviar Mensagem
+                        </button>
+                      </div>
                     </div>
                   </form>
 
-
+                  <div class="contact-alternatives mt-4 text-center">
+                    <p class="text-muted">Ou conecte-se através das redes sociais</p>
+                    <div class="social-links-horizontal">
+                      <a href="https://github.com/brolly26" target="_blank" class="social-link">
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/gabriel-augusto-niva/" target="_blank" class="social-link">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                      <a href="https://wa.me/5531994232364" target="_blank" class="social-link">
+                        <i class="bi bi-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-
               </div>
-
             </div>
           </div>
-
         </section>
 
 
@@ -1220,6 +1673,229 @@
   <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../static/bootstrap/js/boot"></script>
   <script src="../static/script.js"></script>
+  
+  <!-- Animações customizadas -->
+  <script>
+    // Sistema de partículas
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    const particles = [];
+    const particleCount = 100;
+    
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = Math.random() * 3 - 1.5;
+        this.speedY = Math.random() * 3 - 1.5;
+        this.color = ['#00ffff', '#ff0080', '#ffff00', '#00ff00'][Math.floor(Math.random() * 4)];
+      }
+      
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        
+        if (this.x < 0 || this.x > canvas.width) this.speedX = -this.speedX;
+        if (this.y < 0 || this.y > canvas.height) this.speedY = -this.speedY;
+      }
+      
+      draw() {
+        ctx.fillStyle = this.color;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+    
+    function init() {
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+    
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+        
+        // Conectar partículas próximas
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < 100) {
+            ctx.strokeStyle = `rgba(102, 126, 234, ${1 - distance / 100})`;
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      
+      requestAnimationFrame(animate);
+    }
+    
+    init();
+    animate();
+    
+    // Resize canvas
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+    
+    // Efeito de digitação
+    const typingText = document.querySelector('.typing-text');
+    const roles = [
+      'Full Stack Developer',
+      'JavaScript Expert',
+      'React Specialist',
+      'Node.js Developer',
+      'Problem Solver',
+      'Tech Enthusiast'
+    ];
+    
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+    
+    function typeWriter() {
+      const currentRole = roles[roleIndex];
+      
+      if (isDeleting) {
+        typingText.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 50;
+      } else {
+        typingText.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 100;
+      }
+      
+      if (!isDeleting && charIndex === currentRole.length) {
+        isDeleting = true;
+        typingSpeed = 2000; // Pausa antes de deletar
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typingSpeed = 500; // Pausa antes de digitar próximo
+      }
+      
+      setTimeout(typeWriter, typingSpeed);
+    }
+    
+    // Iniciar efeito de digitação
+    setTimeout(typeWriter, 1000);
+    
+    // Indicador de seção ativa no menu
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+    
+    function setActiveLink() {
+      const scrollY = window.pageYOffset;
+      
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + sectionId) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', setActiveLink);
+    setActiveLink();
+    
+    // Smooth scroll para links do menu
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Função para navegar entre tabs e seções
+    function navigateToSection(sectionId) {
+      const targetSection = document.querySelector(sectionId);
+      if (!targetSection) return;
+      
+      // Verificar em qual tab a seção está
+      const tabs = document.querySelectorAll('.tab-pane');
+      let targetTab = null;
+      
+      tabs.forEach(tab => {
+        if (tab.querySelector(sectionId)) {
+          targetTab = tab;
+        }
+      });
+      
+      if (targetTab) {
+        // Ativar a tab correta
+        const tabId = targetTab.id;
+        const tabTrigger = document.querySelector(`[data-bs-target="#${tabId}"]`);
+        
+        if (tabTrigger) {
+          // Simular clique na tab
+          const bsTab = new bootstrap.Tab(tabTrigger);
+          bsTab.show();
+          
+          // Aguardar a transição da tab e então rolar para a seção
+          setTimeout(() => {
+            targetSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }, 300);
+        }
+      }
+    }
+    
+    // Adicionar event listeners para os botões de About
+    document.querySelectorAll('.about-buttons a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        navigateToSection(targetId);
+      });
+    });
+    
+    // Também atualizar os links do menu para funcionar com tabs
+    document.querySelectorAll('.nav-menu a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        navigateToSection(targetId);
+      });
+    });
+  </script>
 </body>
 
 </html>

@@ -190,7 +190,7 @@
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-          type="button" role="tab" aria-controls="pills-profile" aria-selected="true">Português-BR</button>
+          type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Português-BR</button>
       </li>
     </ul>
 
@@ -1445,73 +1445,32 @@
     window.addEventListener('scroll', setActiveLink);
     setActiveLink();
     
-    // Smooth scroll para links do menu
-    navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        if (targetSection) {
-          targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-    
-    // Função para navegar entre tabs e seções
-    function navigateToSection(sectionId) {
-      const targetSection = document.querySelector(sectionId);
-      if (!targetSection) return;
-      
-      // Verificar em qual tab a seção está
-      const tabs = document.querySelectorAll('.tab-pane');
-      let targetTab = null;
-      
-      tabs.forEach(tab => {
-        if (tab.querySelector(sectionId)) {
-          targetTab = tab;
-        }
-      });
-      
-      if (targetTab) {
-        // Ativar a tab correta
-        const tabId = targetTab.id;
-        const tabTrigger = document.querySelector(`[data-bs-target="#${tabId}"]`);
-        
-        if (tabTrigger) {
-          // Simular clique na tab
-          const bsTab = new bootstrap.Tab(tabTrigger);
-          bsTab.show();
-          
-          // Aguardar a transição da tab e então rolar para a seção
-          setTimeout(() => {
-            targetSection.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }, 300);
-        }
+    // Helper: scroll to a section inside the currently visible language pane.
+    // Sections share IDs across the EN/PT panes, so we must target the active one
+    // (document.querySelector would always grab the first/hidden copy).
+    function scrollToSection(hash) {
+      const id = hash.replace('#', '');
+      const activePane = document.querySelector('.tab-pane.active');
+      let target = activePane ? activePane.querySelector('#' + id) : null;
+      if (!target) target = document.getElementById(id); // shared sections (e.g. #inicio)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
-    
-    // Adicionar event listeners para os botões de About
-    document.querySelectorAll('.about-buttons a').forEach(link => {
-      link.addEventListener('click', function(e) {
+
+    // Sidebar menu links
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        navigateToSection(targetId);
+        scrollToSection(this.getAttribute('href'));
       });
     });
-    
-    // Também atualizar os links do menu para funcionar com tabs
-    document.querySelectorAll('.nav-menu a[href^="#"]').forEach(link => {
-      link.addEventListener('click', function(e) {
+
+    // About section buttons
+    document.querySelectorAll('.about-buttons a').forEach(link => {
+      link.addEventListener('click', function (e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        navigateToSection(targetId);
+        scrollToSection(this.getAttribute('href'));
       });
     });
   </script>

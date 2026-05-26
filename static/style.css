@@ -1226,3 +1226,13 @@ background-color: rgb(231, 122, 177) !important;
   }
 
   
+
+/* Grouped technology lists (Skills section) */
+.tech-list li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.95rem;
+}
+.tech-list li:last-child {
+  border-bottom: none;
+}

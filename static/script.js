@@ -1,65 +1,73 @@
-/* Abre e fecha menu lateral em modo mobile */
+/* Mobile sidebar toggle */
 
-const menuMobile = document.querySelector(".menu-mobile");
-const body = document.querySelector("body");
+const menuToggle = document.querySelector("#menu-toggle");
+const header = document.querySelector("#header");
+const body = document.body;
 
-menuMobile.addEventListener("click", () => {
-  menuMobile.classList.contains("bi-list")
-    ? menuMobile.classList.replace("bi-list", "bi-x")
-    : menuMobile.classList.replace("bi-x", "bi-list");
-  body.classList.toggle("menu-nav-active");
-});
-
-/* Fecha o menu quando clicar em algum item e muda o icone para list */
-
-const navItem = document.querySelectorAll(".nav-item");
-
-navItem.forEach((item) => {
-  item.addEventListener("click", () => {
-    if (body.classList.contains("menu-nav-active")) {
-      body.classList.remove("menu-nav-active");
-      menuMobile.classList.replace("bi-x", "bi-list");
-    }
-  });
-});
-
-// Animar todos os itens na tela que tiverem meu atributo data-anime
-
-const item = document.querySelectorAll("[data-anime]");
-
-const animeScroll = () => {
-  const windowTop = window.pageYOffset + window.innerHeight * 0.85 ;
-
-  item.forEach((element) => {
-    if (windowTop > element.offsetTop) {
-      element.classList.add("animate");
-    } else {
-      element.classList.remove("animate");
-    }
-  });
-};
-
-animeScroll();
-
-window.addEventListener("scroll", ()=>{
-  animeScroll();
-})
-
-// Ativar carregamento no botão de enviar formulário para
-
-const btnEnviar = document.querySelector('#btn-enviar')
-const btnEnviarLoader = document.querySelector('#btn-enviar-loader')
-
-if (btnEnviar && btnEnviarLoader) {
-  btnEnviar.addEventListener("click", ()=>{
-    btnEnviarLoader.style.display = "block";
-    btnEnviar.style.display = "none"
-  })
+function setMenu(open) {
+  body.classList.toggle("menu-nav-active", open);
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+  const icon = menuToggle.querySelector("i");
+  icon.classList.toggle("bi-list", !open);
+  icon.classList.toggle("bi-x", open);
+  // Keep the off-screen sidebar out of the tab order while it is closed.
+  if (window.matchMedia("(max-width: 1024px)").matches) {
+    header.toggleAttribute("inert", !open);
+  }
 }
 
-// Tira a mensagem de sucesso depois de 5 segundos
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    setMenu(!body.classList.contains("menu-nav-active"));
+  });
 
-setTimeout(() => {
-  const alerta = document.querySelector('#alerta');
-  if (alerta) alerta.style.display = 'none';
-}, 5000)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && body.classList.contains("menu-nav-active")) {
+      setMenu(false);
+      menuToggle.focus();
+    }
+  });
+
+  // The sidebar is off-screen below 1024px, so it must not be tabbable there.
+  const syncInert = () => {
+    const narrow = window.matchMedia("(max-width: 1024px)").matches;
+    header.toggleAttribute("inert", narrow && !body.classList.contains("menu-nav-active"));
+  };
+  syncInert();
+  window.addEventListener("resize", syncInert);
+
+  document.querySelectorAll(".nav-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      if (body.classList.contains("menu-nav-active")) setMenu(false);
+    });
+  });
+}
+
+/* Scroll-triggered reveal for [data-anime] elements */
+
+const animeItems = document.querySelectorAll("[data-anime]");
+
+if (animeItems.length) {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    animeItems.forEach((el) => el.classList.add("animate"));
+  } else {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -15% 0px" }
+    );
+    animeItems.forEach((el) => io.observe(el));
+  }
+}
+
+/* Footer year */
+
+const yearEl = document.querySelector("#year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();

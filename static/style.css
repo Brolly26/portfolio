@@ -1337,6 +1337,29 @@ section#inicio span#subtitle { margin-right: 0; }
 }
 .social-link--light:hover { color: #fff; }
 
+/* Direct-contact fallback -------------------------------------------------- */
+
+/* The form posts to a third-party endpoint. Until its id is set, a form that
+   silently drops messages is worse than no form, so the page swaps in the
+   address itself rather than pretending to send. */
+.contact-direct { display: grid; gap: 1rem; }
+.contact-direct p { color: #5a6475; margin: 0; }
+.contact-direct .addr {
+  display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+  background: rgba(102, 126, 234, 0.08);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 10px; padding: 1rem 1.15rem;
+}
+.contact-direct .addr code {
+  font-size: 1rem; color: #2a3140; background: none; padding: 0;
+  overflow-wrap: anywhere; font-family: ui-monospace, Menlo, monospace;
+}
+.contact-direct .addr button {
+  margin-left: auto; font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+  background: #4c5fd7; color: #fff; border: none; border-radius: 8px; padding: 0.5rem 1rem;
+}
+.contact-direct .addr button:hover { filter: brightness(1.08); }
+
 /* Language switcher -------------------------------------------------------- */
 
 .nav-pills { margin-left: 0; }

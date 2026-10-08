@@ -1498,6 +1498,47 @@
       }, { passive: true });
       setActiveLink();
 
+      /* Contact forms post to a third-party endpoint. While its id is still the
+         placeholder, a form that posts into the void is worse than no form:
+         someone writes a message and believes it was sent. Swap in the address
+         itself until the id is configured; then the forms work untouched. */
+      var PLACEHOLDER = 'REPLACE_WITH_YOUR_FORM_ID';
+      var EMAIL = 'bielaugusto8@hotmail.com';
+
+      document.querySelectorAll('form.contact-form').forEach(function (f) {
+        if ((f.getAttribute('action') || '').indexOf(PLACEHOLDER) === -1) return;
+        var pt = f.closest('#contato-pt') !== null;
+        var panel = document.createElement('div');
+        panel.className = 'contact-direct';
+        panel.innerHTML =
+          '<p>' + (pt
+            ? 'Escreva direto para o meu e-mail &mdash; respondo em at&eacute; um dia &uacute;til.'
+            : 'Write to me directly &mdash; I reply within one business day.') + '</p>' +
+          '<div class="addr"><code>' + EMAIL + '</code>' +
+          '<button type="button">' + (pt ? 'Copiar' : 'Copy') + '</button></div>';
+
+        var btn = panel.querySelector('button');
+        var code = panel.querySelector('code');
+        btn.addEventListener('click', function () {
+          var done = function () {
+            btn.textContent = pt ? 'Copiado' : 'Copied';
+            setTimeout(function () { btn.textContent = pt ? 'Copiar' : 'Copy'; }, 2000);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(EMAIL).then(done, function () { select(); });
+          } else { select(); }
+          function select() {
+            var r = document.createRange();
+            r.selectNodeContents(code);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(r);
+            btn.textContent = pt ? 'Selecionado' : 'Selected';
+          }
+        });
+        f.replaceWith(panel);
+      });
+
       /* Keep <html lang> in step with the selected language pane */
       document.querySelectorAll('#pills-tab button[data-bs-toggle="pill"]').forEach(function (btn) {
         btn.addEventListener('shown.bs.tab', function (e) {

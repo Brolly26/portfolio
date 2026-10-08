@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Augusto — Full Stack Developer · Applied AI</title>
+  <meta name="description" content="Full stack developer with 3+ years shipping production software in TypeScript and Node.js, now focused on applied AI. Builds LLM agents with tool use on the Claude and OpenAI APIs, running in production over queue-based integrations.">
+  <link rel="canonical" href="https://brolly26.github.io/portfolio/">
+
+  <!-- Open Graph / LinkedIn sharing -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://brolly26.github.io/portfolio/">
+  <meta property="og:title" content="Gabriel Augusto — Full Stack Developer · Applied AI">
+  <meta property="og:description" content="LLM agents with tool use in production. Built and runs Luna, a multi-tenant WhatsApp assistant on the Claude API. TypeScript, Node.js, Python, AWS.">
+  <meta property="og:image" content="https://brolly26.github.io/portfolio/static/imgs/gabriel-profile.jpg">
+  <meta property="og:image:alt" content="Gabriel Augusto">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gabriel Augusto — Full Stack Developer · Applied AI">
+  <meta name="twitter:description" content="LLM agents with tool use in production. Built and runs Luna, a multi-tenant WhatsApp assistant on the Claude API.">
+  <meta name="twitter:image" content="https://brolly26.github.io/portfolio/static/imgs/gabriel-profile.jpg">
+
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23667eea%22/><text y=%22.9em%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2258%22 font-family=%22system-ui,sans-serif%22 font-weight=%22700%22 fill=%22white%22>G</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Gabriel Augusto",
+    "jobTitle": "Full Stack Developer, Applied AI",
+    "url": "https://brolly26.github.io/portfolio/",
+    "email": "mailto:bielaugusto8@hotmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Contagem", "addressRegion": "MG", "addressCountry": "BR" },
+    "sameAs": [
+      "https://github.com/brolly26",
+      "https://www.linkedin.com/in/gabriel-augusto-86aa031b2/"
+    ],
+    "knowsAbout": ["LLM agents", "Tool use / function calling", "Anthropic Claude API", "OpenAI API", "Prompt engineering", "TypeScript", "Node.js", "Python", "Next.js", "AWS"]
+  }
+  </script>
+</head>
+
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <button type="button" class="menu-mobile" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="header">
+    <i class="bi bi-list" aria-hidden="true"></i>
+  </button>
+
+  <aside id="header">
+    <!-- Efeito de partículas no fundo -->
+    <div class="sidebar-particles"></div>
+    
+    <section class="profile">
+      <div class="profile-img-container">
+        <div class="profile-img-border">
+          <img src="static/imgs/gabriel-profile.jpg" alt="Gabriel Augusto" width="130" height="130">
+        </div>
+      </div>
+      
+      <h1 class="profile-name">Gabriel Augusto</h1>
+      <p class="profile-role">Full Stack Developer · Applied AI</p>
+      
+      <div class="social-links mt-4">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/gabriel-augusto-86aa031b2/" class="social-link linkedin" data-tooltip="LinkedIn" aria-label="LinkedIn profile">
+          <i class="bi bi-linkedin" aria-hidden="true"></i>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/brolly26" class="social-link github" data-tooltip="GitHub" aria-label="GitHub profile">
+          <i class="bi bi-github" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:bielaugusto8@hotmail.com" class="social-link email" data-tooltip="Email" aria-label="Send an email">
+          <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5531994232364" target="_blank" rel="noopener noreferrer" class="social-link whatsapp" data-tooltip="WhatsApp" aria-label="WhatsApp">
+          <i class="bi bi-whatsapp" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <nav id="navbar" class="nav-menu">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#inicio">
+            <span class="nav-icon"><i class="bi bi-house-door"></i></span>
+            <span class="nav-text">Home</span>
+            <span class="nav-indicator"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sobre">
+            <span class="nav-icon"><i class="bi bi-person"></i></span>
+            <span class="nav-text">About</span>
+            <span class="nav-indicator"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#habilidades">
+            <span class="nav-icon"><i class="bi bi-gear"></i></span>
+            <span class="nav-text">Skills</span>
+            <span class="nav-indicator"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#curriculo">
+            <span class="nav-icon"><i class="bi bi-file-earmark-text"></i></span>
+            <span class="nav-text">Resume</span>
+            <span class="nav-indicator"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">
+            <span class="nav-icon"><i class="bi bi-collection"></i></span>
+            <span class="nav-text">Portfolio</span>
+            <span class="nav-indicator"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contato">
+            <span class="nav-icon"><i class="bi bi-envelope"></i></span>
+            <span class="nav-text">Contact</span>
+            <span class="nav-indicator"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Footer do menu -->
+    <div class="sidebar-footer">
+      <p class="copyright">© <span id="year">2026</span> Gabriel Augusto</p>
+
+    </div>
+
+  </aside>
+
+  <main id="main">
+
+    <section id="inicio" class="row m-0 p-0 position-relative overflow-hidden">
+      <!-- Canvas para animações de fundo -->
+      <canvas id="particles-canvas" class="position-absolute w-100 h-100" style="z-index: 1;" aria-hidden="true"></canvas>
+      
+      <!-- Código animado no fundo -->
+      <div class="code-background position-absolute w-100 h-100" style="z-index: 2;" aria-hidden="true">
+        <pre class="floating-code" id="code1">
+<span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">'Gabriel Augusto'</span>,
+  <span class="property">role</span>: <span class="string">'Full Stack Developer'</span>,
+  <span class="property">skills</span>: [<span class="string">'JavaScript'</span>, <span class="string">'React'</span>, <span class="string">'Node.js'</span>],
+  <span class="property">passion</span>: <span class="string">'Creating amazing experiences'</span>
+};</pre>
+        
+        <pre class="floating-code" id="code2">
+<span class="keyword">async function</span> <span class="function">buildFuture</span>() {
+  <span class="keyword">await</span> <span class="function">learn</span>();
+  <span class="keyword">await</span> <span class="function">code</span>();
+  <span class="keyword">return</span> <span class="function">innovate</span>();
+}</pre>
+
+        <pre class="floating-code" id="code3">
+<span class="keyword">import</span> { <span class="variable">creativity</span> } <span class="keyword">from</span> <span class="string">'./imagination'</span>;
+<span class="keyword">export default</span> <span class="function">createMagic</span>();</pre>
+      </div>
+
+      <div class="col-md-12 d-flex justify-content-center align-items-center flex-column position-relative" style="z-index: 10; min-height: 100vh;">
+        <h2 class="text-white text-shadow display-3 fw-bold mb-3">Gabriel Augusto</h2>
+
+        <div class="typing-container">
+          <span id="subtitle" class="text-white fs-3">
+            <span class="typing-text"></span>
+            <span class="cursor" aria-hidden="true">|</span>
+          </span>
+        </div>
+
+        <p class="hero-tagline text-white-50 mt-3 mb-0">
+          I build LLM agents that run in production &mdash; tool use, queues, retries and a human fallback.
+        </p>
+
+        <!-- Tags de tecnologia -->
+        <div class="tech-tags mt-4">
+          <span class="tech-tag" style="--delay: 0.2s;">Claude API</span>
+          <span class="tech-tag" style="--delay: 0.35s;">Tool Use</span>
+          <span class="tech-tag" style="--delay: 0.5s;">TypeScript</span>
+          <span class="tech-tag" style="--delay: 0.65s;">Node.js</span>
+          <span class="tech-tag" style="--delay: 0.8s;">Python</span>
+          <span class="tech-tag" style="--delay: 0.95s;">Next.js</span>
+          <span class="tech-tag" style="--delay: 1.1s;">AWS</span>
+        </div>
+
+        <div class="hero-cta mt-5">
+          <a href="#portfolio" class="btn btn-gradient btn-lg">
+            <i class="bi bi-collection" aria-hidden="true"></i> View projects
+          </a>
+          <a href="static/imgs/GabrielAugusto.pdf" class="btn btn-outline-light btn-lg ms-3" download>
+            <i class="bi bi-download" aria-hidden="true"></i> Download CV
+          </a>
+        </div>
+      </div>
+
+      <div class="position-absolute bottom-0 w-100 text-center pb-4" style="z-index: 10;">
+        <div id="arraste" class="d-inline-flex align-items-center">
+          <i class="bi bi-arrow-down text-white pe-2 fs-2 bounce-animation" aria-hidden></i>
+          <a href="#sobre" class="text-white text-decoration-none">Explore More</a>
+        </div>
+      </div>
+
+    </section>
+
+    <ul class="nav nav-pills mb-2 mt-3" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+          type="button" role="tab" aria-controls="pills-home" aria-selected="true">English-EN</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+          type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Português-BR</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+        <section class="container mt-5 about-section" id="sobre-en">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2 class="section-title">About Me</h2>
+              <div class="section-divider mx-auto"></div>
+              <p class="section-subtitle">What I build, and how I think about building it</p>
+            </div>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-lg-5 mb-4">
+              <div class="about-img-container">
+                <img class="img-fluid" src="static/imgs/gabriel-profile.jpg" alt="Gabriel Augusto" width="600" height="800" loading="lazy" decoding="async">
+                <div class="about-img-overlay">
+                  <div class="overlay-content">
+                    <h4>Gabriel Augusto</h4>
+                    <p>Full Stack Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="about-content">
+                <h3 class="about-title mb-3">
+                  <span class="gradient-text">Full Stack Developer</span>, focused on applied AI
+                </h3>
+                <p class="about-description">
+                  Three years shipping production software in TypeScript and Node.js, now building LLM agents.
+                  I built and run <strong>Luna</strong>, a multi-tenant WhatsApp assistant whose agents use the
+                  Claude API with tool use to schedule appointments, answer FAQs and qualify leads for clinics &mdash;
+                  with a human fallback when the model should not answer alone.
+                </p>
+                <p class="about-description">
+                  Day to day that means queue-based integrations (BullMQ, Redis, SQS), third-party APIs that fail in
+                  interesting ways, retries, and multi-tenant data isolation. I work with Claude Code and deliberate
+                  context engineering. I am looking to own production agents end to end under strong senior review.
+                </p>
+                
+                <div class="tech-stack-section mt-4 mb-4">
+                  <h5 class="mb-3">Working stack</h5>
+                  <div class="tech-icons">
+                    <div class="tech-item"><i class="bi bi-robot" aria-hidden="true"></i> Claude API</div>
+                    <div class="tech-item"><i class="bi bi-tools" aria-hidden="true"></i> Tool use</div>
+                    <div class="tech-item"><i class="bi bi-braces" aria-hidden="true"></i> TypeScript</div>
+                    <div class="tech-item"><i class="bi bi-server" aria-hidden="true"></i> Node.js</div>
+                    <div class="tech-item"><i class="bi bi-filetype-py" aria-hidden="true"></i> Python</div>
+                    <div class="tech-item"><i class="bi bi-diagram-3" aria-hidden="true"></i> BullMQ + Redis</div>
+                    <div class="tech-item"><i class="bi bi-cloud" aria-hidden="true"></i> AWS</div>
+                  </div>
+                </div>
+
+                <div class="row personal-info">
+                  <div class="col-md-6">
+                    <div class="info-item">
+                      <i class="bi bi-geo-alt"></i>
+                      <div>
+                        <strong>Location:</strong>
+                        <span>Contagem, MG, Brazil &middot; UTC&minus;3 &middot; Remote</span>
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-translate"></i>
+                      <div>
+                        <strong>Languages:</strong>
+                        <span>Portuguese (native) &middot; English (professional working proficiency)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="info-item">
+                      <i class="bi bi-envelope"></i>
+                      <div>
+                        <strong>Email:</strong>
+                        <span>bielaugusto8@hotmail.com</span>
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-github"></i>
+                      <div>
+                        <strong>GitHub:</strong>
+                        <span>github.com/brolly26</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="about-buttons mt-4">
+                  <a href="#contato" class="btn btn-gradient">
+                    <i class="bi bi-chat-dots"></i> Get in Touch
+                  </a>
+                  <a href="#portfolio" class="btn btn-outline-gradient">
+                    <i class="bi bi-collection"></i> View Projects
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+        </section>
+
+        <section id="habilidades-en" class="mt-5 section-bg">
+
+          <div class="container pb-5">
+
+            <h2 class="pt-5">Skills</h2>
+            <p>What I reach for when building agent systems and the services around them.</p>
+
+            <p class="text-muted small mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i> Grouped by how much I have actually used each one, not by how good the list looks.</p>
+
+            <div class="row mt-4">
+              <div class="col-md-6 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-robot" aria-hidden="true"></i> AI &amp; LLM</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>Anthropic Claude API <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>Tool use / function calling <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>Prompt engineering <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>LLM agents with human-in-the-loop fallback <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>Claude Code &amp; context engineering (CLAUDE.md) <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>OpenAI API <span class="lvl lvl-2">Shipped with</span></li>
+                </ul>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-server" aria-hidden="true"></i> Backend &amp; integrations</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>Node.js &middot; TypeScript <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>REST APIs &middot; webhooks <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>BullMQ &middot; Redis &middot; AWS SQS <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>MySQL &middot; Sequelize <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>Supabase (Postgres) &middot; SQL <span class="lvl lvl-2">Shipped with</span></li>
+                  <li>WhatsApp Cloud API <span class="lvl lvl-2">Shipped with</span></li>
+                  <li>Python <span class="lvl lvl-2">Shipped with</span></li>
+                </ul>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-window" aria-hidden="true"></i> Frontend</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>Next.js &middot; React <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>Vue 3 <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>Tailwind CSS <span class="lvl lvl-2">Shipped with</span></li>
+                  <li>Angular <span class="lvl lvl-3">Familiar with</span></li>
+                </ul>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-cloud" aria-hidden="true"></i> Cloud &amp; delivery</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>AWS (EC2, S3, CloudFront, Amplify) <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>Vercel <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>Git &middot; GitHub &middot; GitLab CI/CD <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>PostHog (custom event tracking) <span class="lvl lvl-2">Shipped with</span></li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-server"></i> Backend</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>Node.js</li>
+                  <li>REST APIs</li>
+                  <li>MySQL</li>
+                  <li>Sequelize</li>
+                  <li>Supabase (PostgreSQL)</li>
+                  <li>Redis</li>
+                  <li>BullMQ</li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-cloud"></i> Cloud &amp; DevOps</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>AWS (EC2, S3, CloudFront, Amplify)</li>
+                  <li>Railway</li>
+                  <li>Vercel</li>
+                  <li>Git / GitHub / GitLab</li>
+                  <li>CI/CD</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-5 cv" id="curriculo-en">
+          <div class="container pb-5">
+            <div class="row">
+              <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Resume</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-subtitle">My Professional Journey</p>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <!-- Experience Section -->
+              <div class="text-center mb-4">
+                <h3 class="gradient-text">Professional Experience</h3>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">March 2025 - Present</span>
+                  <h4><i class="bi bi-briefcase"></i> Full Stack Developer</h4>
+                  <h5 class="text-primary">Clube Certo</h5>
+                  <p>Build and maintain Node.js and TypeScript services for multi-tenant white-label products, with Redis caching and asynchronous integrations on BullMQ and AWS SQS. Eliminated critical N+1 queries across MySQL/Sequelize endpoints, cutting response times on core API routes. I manage the AWS infrastructure (EC2, S3, CloudFront, Amplify) and take part in monitoring and incident response for production workloads.</p>
+                  <div class="mt-2">
+                    <span class="badge bg-primary me-1">Node.js</span>
+                    <span class="badge bg-primary me-1">TypeScript</span>
+                    <span class="badge bg-dark me-1">BullMQ</span>
+                    <span class="badge bg-dark me-1">AWS SQS</span>
+                    <span class="badge bg-dark me-1">Redis</span>
+                    <span class="badge bg-secondary">AWS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">February 2023 - February 2025</span>
+                  <h4><i class="bi bi-code-square"></i> Front-end Developer</h4>
+                  <h5 class="text-primary">PRODEMGE</h5>
+                  <p>Built interfaces for the IPSEMG Portal, the social security platform for Minas Gerais state employees, following WCAG accessibility standards and public-sector data rules. Delivered responsive interfaces across React, Angular and Vue codebases, working in Agile/Scrum teams with code review, Git Flow and GitLab CI/CD.</p>
+                  <div class="mt-2">
+                    <span class="badge bg-danger me-1">Angular</span>
+                    <span class="badge bg-primary me-1">TypeScript</span>
+                    <span class="badge bg-info text-dark">Accessibility</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education Section -->
+              <div class="text-center my-5">
+                <h3 class="gradient-text">Education</h3>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">August 2026 - Present</span>
+                  <h4><i class="bi bi-mortarboard-fill" aria-hidden="true"></i> Postgraduate Specialization, Software Engineering</h4>
+                  <p>Currently in progress.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">October 2022 - June 2025</span>
+                  <h4><i class="bi bi-mortarboard"></i> System Analysis and Development</h4>
+                  <h5 class="text-primary">University Estácio de Sá</h5>
+                  <p>Technology degree with comprehensive focus on software development, databases, and modern web technologies.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">February 2021 - August 2022</span>
+                  <h4><i class="bi bi-award"></i> Technical Course in Systems</h4>
+                  <h5 class="text-primary">SENAI</h5>
+                  <p>Intensive technical training in programming, database management, and software development methodologies.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2022</span>
+                  <h4><i class="bi bi-globe"></i> International Exchange</h4>
+                  <h5 class="text-primary">ECLC - Halifax, Canada</h5>
+                  <p>English language immersion program achieving B2 level proficiency. Enhanced communication skills for international collaboration.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2021</span>
+                  <h4><i class="bi bi-laptop"></i> Front-End Bootcamp</h4>
+                  <h5 class="text-primary">XP Educação (formerly IGTI)</h5>
+                  <p>Intensive bootcamp focused on modern front-end technologies, frameworks, and best practices.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-5">
+              <a href="static/imgs/GabrielAugusto.pdf" class="btn btn-gradient">
+                <i class="bi bi-download" aria-hidden="true"></i> Download CV
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="portfolio-en" class="section-bg mt-5">
+          <div class="container pb-5 pt-5" data-anime="left">
+
+            <h2 class="pb-4">Portfolio</h2>
+            <p class="section-lead">Five of these run in production today. Where a product sits behind a login, I say so and show the work instead of a dead link.</p>
+
+            <!-- Featured: Luna -->
+            <div class="row mb-5">
+              <div class="col-12">
+                <div class="card featured-card shadow-lg border-0 overflow-hidden">
+                  <div class="row g-0">
+                    <div class="col-lg-6">
+                      <div class="featured-visual h-100 d-flex flex-column align-items-center justify-content-center text-white p-4">
+                        <i class="bi bi-chat-dots-fill featured-icon" aria-hidden="true"></i>
+                        <p class="featured-visual-label mt-3 mb-0">Behind login &mdash; demo access on request</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="card-body text-white p-4 p-lg-5">
+                        <span class="badge bg-warning text-dark mb-3">Featured</span>
+                        <h3 class="card-title fw-bold mb-2">Luna &mdash; LLM agents for clinic customer service on WhatsApp</h3>
+                        <p class="featured-role mb-3"><i class="bi bi-person-badge" aria-hidden="true"></i> Founder &amp; Developer &middot; Live, v1.0</p>
+                        <p class="card-text mb-4">Multi-tenant assistant that answers, schedules and qualifies leads for dental and aesthetic clinics. The agents run on the Claude API with <strong>tool use</strong> to book appointments, answer FAQs and hand the conversation to a human when the model should not answer alone. I architected per-tenant data isolation and a BullMQ + Redis pipeline over the WhatsApp Cloud API, with retry logic for asynchronous workloads, and shipped the whole thing solo: Node.js backend, APIs, database, AWS infrastructure, billing and a Next.js dashboard. I ran the discovery interviews with clinic owners myself to validate the problem and set pricing.</p>
+                        <div class="mb-4"><span class="badge bg-light text-dark me-1 mb-1">Claude API</span><span class="badge bg-light text-dark me-1 mb-1">Tool use</span><span class="badge bg-light text-dark me-1 mb-1">Node.js</span><span class="badge bg-light text-dark me-1 mb-1">TypeScript</span><span class="badge bg-light text-dark me-1 mb-1">Next.js</span><span class="badge bg-light text-dark me-1 mb-1">BullMQ</span><span class="badge bg-light text-dark me-1 mb-1">Redis</span><span class="badge bg-light text-dark me-1 mb-1">Supabase</span><span class="badge bg-light text-dark me-1 mb-1">WhatsApp Cloud API</span><span class="badge bg-light text-dark me-1 mb-1">AWS</span></div>
+                        <div class="d-flex gap-2 flex-wrap align-items-center">
+                          <a href="https://luna-dashboard-flame.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> luna-dashboard</a>
+                          <span class="badge bg-dark text-light p-2"><i class="bi bi-lock-fill" aria-hidden="true"></i> Private repo &mdash; walkthrough on request</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="mb-4">Selected work</h3>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#667eea,#764ba2);">
+                    <i class="bi bi-file-earmark-bar-graph" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">SiteCheck AI &mdash; LLM site audit with a deterministic fallback</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> Applied AI &middot; TypeScript</p>
+                    <p class="card-text flex-grow-1">Crawls a site with Puppeteer, runs it through an LLM and returns a plain-language audit as a PDF. The interesting part is what happens when the model is not available: a rule-based analyzer produces the same report shape, so the service degrades instead of failing. The LLM call is wrapped in a timeout race and a catch that classifies auth and quota errors separately. This is the repo I would walk through end to end.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">OpenAI API</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Express</span><span class="badge text-bg-light border me-1 mb-1">Puppeteer</span><span class="badge text-bg-light border me-1 mb-1">PDFKit</span></div>
+                    <div class="card-actions mt-auto"><a href="https://github.com/brolly26/IACheckSite" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Code</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Public repo</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#11998e,#38ef7d);">
+                    <i class="bi bi-clipboard2-pulse-fill" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Ronda Animal &mdash; medication-round PWA</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-heart-pulse" aria-hidden="true"></i> Next.js &middot; Supabase &middot; PWA</p>
+                    <p class="card-text flex-grow-1">Grew a single-file prototype built for one veterinary professional into a live PWA a real team uses daily: medication rounds, treatments, stock, shift handoff, PIN-based team access and adherence tracking, around 90 features across 13 areas. Includes spreadsheet import and export so clinics can bring existing records.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">Supabase</span><span class="badge text-bg-light border me-1 mb-1">Postgres</span><span class="badge text-bg-light border me-1 mb-1">PWA</span><span class="badge text-bg-light border me-1 mb-1">Vercel</span></div>
+                    <div class="card-actions mt-auto"><a href="https://rondanimais.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> rondanimais.com.br</a> <span class="badge bg-dark"><i class="bi bi-lock-fill" aria-hidden="true"></i> Behind login &mdash; demo access on request</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#f7971e,#ffd200);">
+                    <i class="bi bi-layers-fill" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Clube Certo &mdash; multi-tenant white-label platform</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-stack" aria-hidden="true"></i> Full Stack &middot; Mar 2025 &ndash; Present</p>
+                    <p class="card-text flex-grow-1">Node.js and TypeScript services for multi-tenant white-label products, with Redis caching and asynchronous integrations on BullMQ and AWS SQS. Eliminated critical N+1 queries across MySQL/Sequelize endpoints, cutting response times on core API routes. I manage the AWS infrastructure and take part in monitoring and incident response for production workloads.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Node.js</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">BullMQ</span><span class="badge text-bg-light border me-1 mb-1">AWS SQS</span><span class="badge text-bg-light border me-1 mb-1">Redis</span><span class="badge text-bg-light border me-1 mb-1">MySQL</span><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">Vue 3</span></div>
+                    <div class="card-actions mt-auto"><span class="badge bg-dark"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i> Production &middot; Confidential</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#2193b0,#6dd5ed);">
+                    <i class="bi bi-hospital" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">IPSEMG Portal &mdash; public social security platform</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-bank" aria-hidden="true"></i> Government project &middot; Feb 2023 &ndash; Feb 2025</p>
+                    <p class="card-text flex-grow-1">Interfaces for the social security platform serving Minas Gerais state employees, built to WCAG accessibility standards and public-sector data rules. Delivered across React, Angular and Vue codebases, working in Agile teams with code review, Git Flow and GitLab CI/CD.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Angular</span><span class="badge text-bg-light border me-1 mb-1">React</span><span class="badge text-bg-light border me-1 mb-1">Vue</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">WCAG</span><span class="badge text-bg-light border me-1 mb-1">GitLab CI/CD</span></div>
+                    <div class="card-actions mt-auto"><span class="badge bg-dark"><i class="bi bi-shield-check" aria-hidden="true"></i> Production &middot; Public sector</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#ee9ca7,#b06ab3);">
+                    <i class="bi bi-house-heart-fill" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">PetEscolhe &mdash; pet adoption platform</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-house-heart" aria-hidden="true"></i> Next.js &middot; PostHog</p>
+                    <p class="card-text flex-grow-1">Next.js front and back end for an adoption platform in the Belo Horizonte region, with real listed animals and a kennel partnership. I instrumented the adoption funnel in PostHog with a custom contact-click event, so engagement is measured rather than assumed.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">PostHog</span><span class="badge text-bg-light border me-1 mb-1">Product analytics</span></div>
+                    <div class="card-actions mt-auto"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#4b6cb7,#182848);">
+                    <i class="bi bi-shop" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Freelance &mdash; production sites for local businesses</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-briefcase" aria-hidden="true"></i> Freelance &middot; Live in production</p>
+                    <p class="card-text flex-grow-1">Delivered end to end, from requirements to deploy: PP Loca&ccedil;&atilde;o, Escola IN-FLY, J&amp;B Areia e Brita, and Projeto CHICO for an animal-protection NGO (adoption catalog, donation campaign with goal tracking, volunteer sign-up).</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">React</span><span class="badge text-bg-light border me-1 mb-1">SEO</span><span class="badge text-bg-light border me-1 mb-1">Responsive UI</span></div>
+                    <div class="card-actions mt-auto"><a href="https://www.pplocacaoltda.com.br/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Visit site</a> <a href="https://escolainfly.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Escola IN-FLY</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section class="pt-5 pb-5" id="contato-en">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-subtitle">Let's work together on your next project</p>
+              </div>
+            </div>
+
+            <div class="row">
+
+
+              <div class="col-md-5">
+                <div class="contact-info-card">
+                  <div class="contact-item">
+                    <div class="contact-icon"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></div>
+                    <div class="contact-details">
+                      <h5>Location</h5>
+                      <p>Contagem, MG, Brazil &middot; UTC&minus;3 &middot; Available for remote work</p>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-icon"><i class="bi bi-envelope-fill" aria-hidden="true"></i></div>
+                    <div class="contact-details">
+                      <h5>Email</h5>
+                      <p><a href="mailto:bielaugusto8@hotmail.com">bielaugusto8@hotmail.com</a></p>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-icon"><i class="bi bi-linkedin" aria-hidden="true"></i></div>
+                    <div class="contact-details">
+                      <h5>LinkedIn</h5>
+                      <p><a href="https://www.linkedin.com/in/gabriel-augusto-86aa031b2/" target="_blank" rel="noopener noreferrer">linkedin.com/in/gabriel-augusto</a></p>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-icon"><i class="bi bi-github" aria-hidden="true"></i></div>
+                    <div class="contact-details">
+                      <h5>GitHub</h5>
+                      <p><a href="https://github.com/brolly26" target="_blank" rel="noopener noreferrer">github.com/brolly26</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-7">
+                <div class="contact-form-card">
+                  <h4 class="mb-4">Send a message</h4>
+                  <form class="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="name-en" class="form-label"><i class="bi bi-person" aria-hidden="true"></i> Full name</label>
+                          <input type="text" class="form-control form-control-lg" id="name-en" name="name" placeholder="Your full name" required>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="email-en" class="form-label"><i class="bi bi-envelope" aria-hidden="true"></i> Email</label>
+                          <input type="email" class="form-control form-control-lg" id="email-en" name="email" placeholder="you@company.com" required>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="subject-en" class="form-label"><i class="bi bi-chat-text" aria-hidden="true"></i> Subject</label>
+                          <input type="text" class="form-control form-control-lg" id="subject-en" name="subject" placeholder="What would you like to talk about?" required>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="message-en" class="form-label"><i class="bi bi-pencil-square" aria-hidden="true"></i> Message</label>
+                          <textarea class="form-control form-control-lg" id="message-en" name="message" rows="8" placeholder="Tell me about the role or the project..." required></textarea>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-gradient btn-lg w-100"><i class="bi bi-send" aria-hidden="true"></i> Send message</button>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="contact-alternatives mt-4 text-center">
+                    <p class="text-muted">Or reach me directly</p>
+                    <div class="social-links-horizontal">
+                      <a href="https://github.com/brolly26" target="_blank" rel="noopener noreferrer" class="social-link social-link--light" aria-label="GitHub profile"><i class="bi bi-github" aria-hidden="true"></i></a>
+                      <a href="https://www.linkedin.com/in/gabriel-augusto-86aa031b2/" target="_blank" rel="noopener noreferrer" class="social-link social-link--light" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+                      <a href="https://wa.me/5531994232364" target="_blank" rel="noopener noreferrer" class="social-link social-link--light" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+      </div>
+
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+        <section class="container mt-5 about-section" id="sobre-pt">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2 class="section-title">Sobre Mim</h2>
+              <div class="section-divider mx-auto"></div>
+              <p class="section-subtitle">O que eu construo, e como penso em construir</p>
+            </div>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-lg-5 mb-4">
+              <div class="about-img-container">
+                <img class="img-fluid" src="static/imgs/gabriel-profile.jpg" alt="Gabriel Augusto" width="600" height="800" loading="lazy" decoding="async">
+                <div class="about-img-overlay">
+                  <div class="overlay-content">
+                    <h4>Gabriel Augusto</h4>
+                    <p>Desenvolvedor Full Stack</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="about-content">
+                <h3 class="about-title mb-3">
+                  <span class="gradient-text">Desenvolvedor Full Stack</span>, com foco em IA aplicada
+                </h3>
+                <p class="about-description">
+                  Três anos entregando software em produção com TypeScript e Node.js, hoje construindo agentes de LLM.
+                  Criei e opero a <strong>Luna</strong>, um assistente de WhatsApp multi-tenant cujos agentes usam a
+                  Claude API com <em>tool use</em> para agendar consultas, responder dúvidas e qualificar leads de
+                  clínicas &mdash; com repasse para atendimento humano quando o modelo não deve responder sozinho.
+                </p>
+                <p class="about-description">
+                  Na prática isso significa integrações por fila (BullMQ, Redis, SQS), APIs de terceiros que falham de
+                  formas criativas, retries e isolamento de dados por tenant. Trabalho com Claude Code e engenharia de
+                  contexto deliberada. Quero assumir agentes em produção de ponta a ponta sob revisão sênior.
+                </p>
+                
+                <div class="tech-stack-section mt-4 mb-4">
+                  <h5 class="mb-3">Stack de trabalho</h5>
+                  <div class="tech-icons">
+                    <div class="tech-item"><i class="bi bi-robot" aria-hidden="true"></i> Claude API</div>
+                    <div class="tech-item"><i class="bi bi-tools" aria-hidden="true"></i> Tool use</div>
+                    <div class="tech-item"><i class="bi bi-braces" aria-hidden="true"></i> TypeScript</div>
+                    <div class="tech-item"><i class="bi bi-server" aria-hidden="true"></i> Node.js</div>
+                    <div class="tech-item"><i class="bi bi-filetype-py" aria-hidden="true"></i> Python</div>
+                    <div class="tech-item"><i class="bi bi-diagram-3" aria-hidden="true"></i> BullMQ + Redis</div>
+                    <div class="tech-item"><i class="bi bi-cloud" aria-hidden="true"></i> AWS</div>
+                  </div>
+                </div>
+
+                <div class="row personal-info">
+                  <div class="col-md-6">
+                    <div class="info-item">
+                      <i class="bi bi-geo-alt"></i>
+                      <div>
+                        <strong>Localização:</strong>
+                        <span>Contagem, MG &middot; UTC&minus;3 &middot; Remoto</span>
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-translate"></i>
+                      <div>
+                        <strong>Idiomas:</strong>
+                        <span>Português (nativo) &middot; Inglês (proficiência profissional)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="info-item">
+                      <i class="bi bi-envelope"></i>
+                      <div>
+                        <strong>Email:</strong>
+                        <span>bielaugusto8@hotmail.com</span>
+                      </div>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-github"></i>
+                      <div>
+                        <strong>GitHub:</strong>
+                        <span>github.com/brolly26</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="about-buttons mt-4">
+                  <a href="#contato" class="btn btn-gradient">
+                    <i class="bi bi-chat-dots"></i> Entre em Contato
+                  </a>
+                  <a href="#portfolio" class="btn btn-outline-gradient">
+                    <i class="bi bi-collection"></i> Ver Projetos
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="habilidades-pt" class="mt-5 section-bg">
+
+          <div class="container pb-5">
+
+            <h2 class="pt-5">Habilidades</h2>
+            <p>O que eu uso ao construir sistemas de agentes e os serviços em volta deles.</p>
+
+            <p class="text-muted small mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i> Agrupado por quanto eu realmente usei cada uma, não por quanto a lista impressiona.</p>
+
+            <div class="row mt-4">
+              <div class="col-md-6 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-robot" aria-hidden="true"></i> IA &amp; LLM</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>Anthropic Claude API <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>Tool use / function calling <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>Prompt engineering <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>LLM agents with human-in-the-loop fallback <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>Claude Code &amp; context engineering (CLAUDE.md) <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>OpenAI API <span class="lvl lvl-2">Já entreguei com</span></li>
+                </ul>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-server" aria-hidden="true"></i> Backend &amp; integrações</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>Node.js &middot; TypeScript <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>REST APIs &middot; webhooks <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>BullMQ &middot; Redis &middot; AWS SQS <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>MySQL &middot; Sequelize <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>Supabase (Postgres) &middot; SQL <span class="lvl lvl-2">Já entreguei com</span></li>
+                  <li>WhatsApp Cloud API <span class="lvl lvl-2">Já entreguei com</span></li>
+                  <li>Python <span class="lvl lvl-2">Já entreguei com</span></li>
+                </ul>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-window" aria-hidden="true"></i> Frontend</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>Next.js &middot; React <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>Vue 3 <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>Tailwind CSS <span class="lvl lvl-2">Já entreguei com</span></li>
+                  <li>Angular <span class="lvl lvl-3">Familiaridade</span></li>
+                </ul>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-cloud" aria-hidden="true"></i> Cloud &amp; entrega</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>AWS (EC2, S3, CloudFront, Amplify) <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>Vercel <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>Git &middot; GitHub &middot; GitLab CI/CD <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>PostHog (custom event tracking) <span class="lvl lvl-2">Já entreguei com</span></li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-server"></i> Backend</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>Node.js</li>
+                  <li>APIs REST</li>
+                  <li>MySQL</li>
+                  <li>Sequelize</li>
+                  <li>Supabase (PostgreSQL)</li>
+                  <li>Redis</li>
+                  <li>BullMQ</li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-4">
+                <h5 class="text-primary mb-3"><i class="bi bi-cloud"></i> Cloud &amp; DevOps</h5>
+                <ul class="list-unstyled tech-list">
+                  <li>AWS (EC2, S3, CloudFront, Amplify)</li>
+                  <li>Railway</li>
+                  <li>Vercel</li>
+                  <li>Git / GitHub / GitLab</li>
+                  <li>CI/CD</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-5 cv" id="curriculo-pt">
+          <div class="container pb-5">
+            <div class="row">
+              <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Currículo</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-subtitle">Minha Jornada Profissional</p>
+              </div>
+            </div>
+            <div class="timeline">
+              <!-- Seção de Experiência -->
+              <div class="text-center mb-4">
+                <h3 class="gradient-text">Experiência Profissional</h3>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">Março 2025 - Presente</span>
+                  <h4><i class="bi bi-briefcase"></i> Desenvolvedor Full Stack</h4>
+                  <h5 class="text-primary">Clube Certo</h5>
+                  <p>Construo e mantenho serviços em Node.js e TypeScript para produtos white-label multi-tenant, com cache em Redis e integrações assíncronas em BullMQ e AWS SQS. Eliminei queries N+1 críticas em endpoints MySQL/Sequelize, reduzindo o tempo de resposta em rotas centrais da API. Cuido da infraestrutura AWS (EC2, S3, CloudFront, Amplify) e participo do monitoramento e da resposta a incidentes em produção.</p>
+                  <div class="mt-2">
+                    <span class="badge bg-primary me-1">Node.js</span>
+                    <span class="badge bg-primary me-1">TypeScript</span>
+                    <span class="badge bg-dark me-1">BullMQ</span>
+                    <span class="badge bg-dark me-1">AWS SQS</span>
+                    <span class="badge bg-dark me-1">Redis</span>
+                    <span class="badge bg-secondary">AWS</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">Fevereiro 2023 - Fevereiro 2025</span>
+                  <h4><i class="bi bi-code-square"></i> Desenvolvedor Front-end</h4>
+                  <h5 class="text-primary">PRODEMGE</h5>
+                  <p>Construí interfaces para o Portal IPSEMG, a plataforma previdenciária dos servidores de Minas Gerais, seguindo as diretrizes de acessibilidade WCAG e as regras de dados do setor público. Entreguei interfaces responsivas em bases React, Angular e Vue, em times ágeis com code review, Git Flow e CI/CD no GitLab.</p>
+                  <div class="mt-2">
+                    <span class="badge bg-danger me-1">Angular</span>
+                    <span class="badge bg-primary me-1">TypeScript</span>
+                    <span class="badge bg-info text-dark">Acessibilidade</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Seção de Educação -->
+              <div class="text-center my-5">
+                <h3 class="gradient-text">Educação</h3>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">Agosto 2026 - Presente</span>
+                  <h4><i class="bi bi-mortarboard-fill" aria-hidden="true"></i> Pós-graduação, Engenharia de Software</h4>
+                  <p>Em andamento.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">Outubro 2022 - Junho 2025</span>
+                  <h4><i class="bi bi-mortarboard"></i> Análise e Desenvolvimento de Sistemas</h4>
+                  <h5 class="text-primary">Universidade Estácio de Sá</h5>
+                  <p>Graduação tecnológica com foco abrangente em desenvolvimento de software, bancos de dados e tecnologias web modernas.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">Fevereiro 2021 - Agosto 2022</span>
+                  <h4><i class="bi bi-award"></i> Curso Técnico em Sistemas</h4>
+                  <h5 class="text-primary">SENAI</h5>
+                  <p>Formação técnica intensiva em programação, gerenciamento de banco de dados e metodologias de desenvolvimento de software.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2022</span>
+                  <h4><i class="bi bi-globe"></i> Intercâmbio Internacional</h4>
+                  <h5 class="text-primary">ECLC - Halifax, Canadá</h5>
+                  <p>Programa de imersão em língua inglesa alcançando proficiência nível B2. Aprimoramento das habilidades de comunicação para colaboração internacional.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2021</span>
+                  <h4><i class="bi bi-laptop"></i> Bootcamp Front-End</h4>
+                  <h5 class="text-primary">XP Educação (antiga IGTI)</h5>
+                  <p>Bootcamp intensivo focado em tecnologias front-end modernas, frameworks e melhores práticas.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-center mt-5">
+              <a href="static/imgs/GabrielAugusto.pdf" class="btn btn-gradient">
+                <i class="bi bi-download"></i> Baixar CV
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="portfolio-pt" class="section-bg mt-5">
+          <div class="container pb-5 pt-5" data-anime="left">
+
+            <h2 class="pb-4">Portfólio</h2>
+            <p class="section-lead">Cinco destes estão em produção hoje. Quando o produto fica atrás de login, eu digo isso e mostro o trabalho em vez de um link morto.</p>
+
+            <!-- Featured: Luna -->
+            <div class="row mb-5">
+              <div class="col-12">
+                <div class="card featured-card shadow-lg border-0 overflow-hidden">
+                  <div class="row g-0">
+                    <div class="col-lg-6">
+                      <div class="featured-visual h-100 d-flex flex-column align-items-center justify-content-center text-white p-4">
+                        <i class="bi bi-chat-dots-fill featured-icon" aria-hidden="true"></i>
+                        <p class="featured-visual-label mt-3 mb-0">Atrás de login &mdash; acesso de demonstração sob solicitação</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="card-body text-white p-4 p-lg-5">
+                        <span class="badge bg-warning text-dark mb-3">Destaque</span>
+                        <h3 class="card-title fw-bold mb-2">Luna &mdash; agentes de LLM para atendimento de clínicas no WhatsApp</h3>
+                        <p class="featured-role mb-3"><i class="bi bi-person-badge" aria-hidden="true"></i> Founder &amp; Developer &middot; No ar, v1.0</p>
+                        <p class="card-text mb-4">Assistente multi-tenant que responde, agenda e qualifica leads para clínicas odontológicas e estéticas. Os agentes rodam sobre a Claude API com <strong>tool use</strong> para marcar consultas, responder dúvidas e repassar a conversa para um humano quando o modelo não deve responder sozinho. Arquitetei o isolamento de dados por tenant e um pipeline BullMQ + Redis sobre a WhatsApp Cloud API, com retry para cargas assíncronas, e entreguei tudo sozinho: backend Node.js, APIs, banco, infraestrutura AWS, cobrança e um dashboard em Next.js. Conduzi as entrevistas de descoberta com donos de clínica para validar o problema e definir preço.</p>
+                        <div class="mb-4"><span class="badge bg-light text-dark me-1 mb-1">Claude API</span><span class="badge bg-light text-dark me-1 mb-1">Tool use</span><span class="badge bg-light text-dark me-1 mb-1">Node.js</span><span class="badge bg-light text-dark me-1 mb-1">TypeScript</span><span class="badge bg-light text-dark me-1 mb-1">Next.js</span><span class="badge bg-light text-dark me-1 mb-1">BullMQ</span><span class="badge bg-light text-dark me-1 mb-1">Redis</span><span class="badge bg-light text-dark me-1 mb-1">Supabase</span><span class="badge bg-light text-dark me-1 mb-1">WhatsApp Cloud API</span><span class="badge bg-light text-dark me-1 mb-1">AWS</span></div>
+                        <div class="d-flex gap-2 flex-wrap align-items-center">
+                          <a href="https://luna-dashboard-flame.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> luna-dashboard</a>
+                          <span class="badge bg-dark text-light p-2"><i class="bi bi-lock-fill" aria-hidden="true"></i> Repo privado &mdash; walkthrough sob solicitação</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="mb-4">Trabalhos selecionados</h3>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#667eea,#764ba2);">
+                    <i class="bi bi-file-earmark-bar-graph" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">SiteCheck AI &mdash; auditoria de sites com LLM e fallback determinístico</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> IA aplicada &middot; TypeScript</p>
+                    <p class="card-text flex-grow-1">Varre um site com Puppeteer, passa por um LLM e devolve uma auditoria em linguagem simples, em PDF. A parte interessante é o que acontece quando o modelo não está disponível: um analisador por regras produz o mesmo formato de relatório, então o serviço degrada em vez de falhar. A chamada ao LLM tem timeout via <code>Promise.race</code> e um catch que separa erro de autenticação de erro de cota. É o repositório que eu apresentaria de ponta a ponta.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">OpenAI API</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Express</span><span class="badge text-bg-light border me-1 mb-1">Puppeteer</span><span class="badge text-bg-light border me-1 mb-1">PDFKit</span></div>
+                    <div class="card-actions mt-auto"><a href="https://github.com/brolly26/IACheckSite" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Código</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Repo público</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#11998e,#38ef7d);">
+                    <i class="bi bi-clipboard2-pulse-fill" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Ronda Animal &mdash; PWA de ronda de medicação</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-heart-pulse" aria-hidden="true"></i> Next.js &middot; Supabase &middot; PWA</p>
+                    <p class="card-text flex-grow-1">Transformei um protótipo de arquivo único, feito para uma profissional veterinária, em um PWA no ar que uma equipe real usa todo dia: rondas de medicação, tratamentos, estoque, passagem de plantão, acesso por PIN e acompanhamento de adesão &mdash; cerca de 90 funcionalidades em 13 áreas. Inclui importação e exportação por planilha para as clínicas trazerem registros existentes.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">Supabase</span><span class="badge text-bg-light border me-1 mb-1">Postgres</span><span class="badge text-bg-light border me-1 mb-1">PWA</span><span class="badge text-bg-light border me-1 mb-1">Vercel</span></div>
+                    <div class="card-actions mt-auto"><a href="https://rondanimais.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> rondanimais.com.br</a> <span class="badge bg-dark"><i class="bi bi-lock-fill" aria-hidden="true"></i> Atrás de login &mdash; acesso de demonstração sob solicitação</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#f7971e,#ffd200);">
+                    <i class="bi bi-layers-fill" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Clube Certo &mdash; plataforma white-label multi-tenant</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-stack" aria-hidden="true"></i> Full Stack &middot; Mar 2025 &ndash; Presente</p>
+                    <p class="card-text flex-grow-1">Serviços em Node.js e TypeScript para produtos white-label multi-tenant, com cache em Redis e integrações assíncronas em BullMQ e AWS SQS. Eliminei queries N+1 críticas em endpoints MySQL/Sequelize, reduzindo o tempo de resposta em rotas centrais da API. Cuido da infraestrutura AWS e participo do monitoramento e da resposta a incidentes das cargas em produção.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Node.js</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">BullMQ</span><span class="badge text-bg-light border me-1 mb-1">AWS SQS</span><span class="badge text-bg-light border me-1 mb-1">Redis</span><span class="badge text-bg-light border me-1 mb-1">MySQL</span><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">Vue 3</span></div>
+                    <div class="card-actions mt-auto"><span class="badge bg-dark"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i> Production &middot; Confidential</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#2193b0,#6dd5ed);">
+                    <i class="bi bi-hospital" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Portal IPSEMG &mdash; plataforma previdenciária pública</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-bank" aria-hidden="true"></i> Projeto governamental &middot; Fev 2023 &ndash; Fev 2025</p>
+                    <p class="card-text flex-grow-1">Interfaces para a plataforma previdenciária dos servidores de Minas Gerais, seguindo as diretrizes de acessibilidade WCAG e as regras de dados do setor público. Entregue em bases React, Angular e Vue, em times ágeis com code review, Git Flow e CI/CD no GitLab.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Angular</span><span class="badge text-bg-light border me-1 mb-1">React</span><span class="badge text-bg-light border me-1 mb-1">Vue</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">WCAG</span><span class="badge text-bg-light border me-1 mb-1">GitLab CI/CD</span></div>
+                    <div class="card-actions mt-auto"><span class="badge bg-dark"><i class="bi bi-shield-check" aria-hidden="true"></i> Production &middot; Public sector</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#ee9ca7,#b06ab3);">
+                    <i class="bi bi-house-heart-fill" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">PetEscolhe &mdash; plataforma de adoção de animais</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-house-heart" aria-hidden="true"></i> Next.js &middot; PostHog</p>
+                    <p class="card-text flex-grow-1">Front e back em Next.js para uma plataforma de adoção na região de Belo Horizonte, com animais reais cadastrados e parceria com um canil. Instrumentei o funil de adoção no PostHog com um evento próprio de clique em contato, para medir engajamento em vez de supor.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">PostHog</span><span class="badge text-bg-light border me-1 mb-1">Product analytics</span></div>
+                    <div class="card-actions mt-auto"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#4b6cb7,#182848);">
+                    <i class="bi bi-shop" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Freelance &mdash; sites em produção para negócios locais</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-briefcase" aria-hidden="true"></i> Freelance &middot; No ar em produção</p>
+                    <p class="card-text flex-grow-1">Entregues de ponta a ponta, do requisito ao deploy: PP Loca&ccedil;&atilde;o, Escola IN-FLY, J&amp;B Areia e Brita, e o Projeto CHICO para uma ONG de proteção animal (catálogo de adoção, campanha de doação com meta, cadastro de voluntários).</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">React</span><span class="badge text-bg-light border me-1 mb-1">SEO</span><span class="badge text-bg-light border me-1 mb-1">Responsive UI</span></div>
+                    <div class="card-actions mt-auto"><a href="https://www.pplocacaoltda.com.br/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Visitar site</a> <a href="https://escolainfly.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Escola IN-FLY</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+        <section class="pt-5 pb-5" id="contato-pt">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-subtitle">Vamos trabalhar juntos no seu próximo projeto</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5">
+                <div class="contact-info-card">
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div class="contact-details">
+                      <h5>Localização</h5>
+                      <p>Contagem, MG &middot; UTC&minus;3 &middot; Disponível para trabalho remoto</p>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <div class="contact-details">
+                      <h5>Email</h5>
+                      <p>bielaugusto8@hotmail.com</p>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="bi bi-linkedin"></i>
+                    </div>
+                    <div class="contact-details">
+                      <h5>LinkedIn</h5>
+                      <p><a href="https://www.linkedin.com/in/gabriel-augusto-86aa031b2/" target="_blank" rel="noopener noreferrer">linkedin.com/in/gabriel-augusto</a></p>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="bi bi-github"></i>
+                    </div>
+                    <div class="contact-details">
+                      <h5>GitHub</h5>
+                      <p><a href="https://github.com/brolly26" target="_blank" rel="noopener noreferrer">github.com/brolly26</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-7">
+                <div class="contact-form-card">
+                  <h4 class="mb-4">Envie sua Mensagem</h4>
+                  <form class="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="nome-pt" class="form-label">
+                            <i class="bi bi-person"></i> Nome Completo
+                          </label>
+                          <input type="text" 
+                            class="form-control form-control-lg" 
+                            id="nome-pt" 
+                            name="nome"
+                            placeholder="Seu nome completo" 
+                            required>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="email-pt" class="form-label">
+                            <i class="bi bi-envelope"></i> Email
+                          </label>
+                          <input type="email" 
+                            class="form-control form-control-lg" 
+                            id="email-pt" 
+                            name="email"
+                            placeholder="seu@email.com" 
+                            required>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="assunto-pt" class="form-label">
+                            <i class="bi bi-chat-text"></i> Assunto
+                          </label>
+                          <input type="text" 
+                            class="form-control form-control-lg" 
+                            id="assunto-pt" 
+                            name="assunto"
+                            placeholder="Sobre o que você quer falar?" 
+                            required>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="mensagem-pt" class="form-label">
+                            <i class="bi bi-pencil-square"></i> Mensagem
+                          </label>
+                          <textarea class="form-control form-control-lg" 
+                            id="mensagem-pt" 
+                            name="mensagem"
+                            rows="8" 
+                            placeholder="Conte-me mais sobre seu projeto..."
+                            required></textarea>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-gradient btn-lg w-100">
+                          <i class="bi bi-send"></i> Enviar Mensagem
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+
+                  <div class="contact-alternatives mt-4 text-center">
+                    <p class="text-muted">Ou conecte-se através das redes sociais</p>
+                    <div class="social-links-horizontal">
+                      <a href="https://github.com/brolly26" target="_blank" rel="noopener noreferrer" class="social-link social-link--light" aria-label="GitHub profile">
+                        <i class="bi bi-github" aria-hidden="true"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/gabriel-augusto-86aa031b2/" target="_blank" rel="noopener noreferrer" class="social-link social-link--light" aria-label="LinkedIn profile">
+                        <i class="bi bi-linkedin" aria-hidden="true"></i>
+                      </a>
+                      <a href="https://wa.me/5531994232364" target="_blank" rel="noopener noreferrer" class="social-link social-link--light" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      </div>
+
+
+    </div>
+
+
+  </main>
+
+  <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/script.js"></script>
+  
+  <!-- Hero animations + navigation -->
+  <script>
+    (function () {
+      'use strict';
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ---------- Particle field ----------
+         Capped, connection-limited and paused whenever the hero is off-screen or
+         the tab is hidden. The original version ran 100 particles with shadowBlur
+         and full pairwise linking forever, which cost most of the frame budget. */
+      var canvas = document.getElementById('particles-canvas');
+      if (canvas && !reduceMotion) {
+        var ctx = canvas.getContext('2d');
+        var particles = [];
+        var running = false;
+        var rafId = null;
+
+        function sizeCanvas() {
+          var dpr = Math.min(window.devicePixelRatio || 1, 2);
+          var rect = canvas.getBoundingClientRect();
+          canvas.width = rect.width * dpr;
+          canvas.height = rect.height * dpr;
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        function count() {
+          return window.innerWidth < 768 ? 22 : 42;
+        }
+
+        function seed() {
+          var w = canvas.clientWidth, h = canvas.clientHeight;
+          particles = [];
+          for (var i = 0; i < count(); i++) {
+            particles.push({
+              x: Math.random() * w,
+              y: Math.random() * h,
+              size: Math.random() * 2 + 0.8,
+              vx: (Math.random() - 0.5) * 0.5,
+              vy: (Math.random() - 0.5) * 0.5
+            });
+          }
+        }
+
+        function frame() {
+          var w = canvas.clientWidth, h = canvas.clientHeight;
+          ctx.clearRect(0, 0, w, h);
+          for (var i = 0; i < particles.length; i++) {
+            var pt = particles[i];
+            pt.x += pt.vx; pt.y += pt.vy;
+            if (pt.x < 0 || pt.x > w) pt.vx = -pt.vx;
+            if (pt.y < 0 || pt.y > h) pt.vy = -pt.vy;
+            ctx.fillStyle = 'rgba(160, 175, 245, 0.75)';
+            ctx.beginPath();
+            ctx.arc(pt.x, pt.y, pt.size, 0, Math.PI * 2);
+            ctx.fill();
+            for (var j = i + 1; j < particles.length; j++) {
+              var q = particles[j];
+              var dx = pt.x - q.x, dy = pt.y - q.y;
+              var d2 = dx * dx + dy * dy;
+              if (d2 < 14400) {
+                ctx.strokeStyle = 'rgba(102, 126, 234, ' + (1 - Math.sqrt(d2) / 120) * 0.45 + ')';
+                ctx.lineWidth = 0.5;
+                ctx.beginPath();
+                ctx.moveTo(pt.x, pt.y);
+                ctx.lineTo(q.x, q.y);
+                ctx.stroke();
+              }
+            }
+          }
+          rafId = requestAnimationFrame(frame);
+        }
+
+        function start() { if (!running) { running = true; rafId = requestAnimationFrame(frame); } }
+        function stop() { running = false; if (rafId) cancelAnimationFrame(rafId); rafId = null; }
+
+        sizeCanvas(); seed(); start();
+
+        var resizeTimer;
+        window.addEventListener('resize', function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function () { sizeCanvas(); seed(); }, 150);
+        });
+
+        var visible = true;
+        var hero = document.getElementById('inicio');
+
+        document.addEventListener('visibilitychange', function () {
+          if (document.hidden) { stop(); } else if (visible) { start(); }
+        });
+
+        if (hero && 'IntersectionObserver' in window) {
+          new IntersectionObserver(function (entries) {
+            visible = entries[0].isIntersecting;
+            if (visible && !document.hidden) { start(); } else { stop(); }
+          }, { threshold: 0 }).observe(hero);
+        }
+      }
+
+      /* ---------- Typing effect ---------- */
+      var typingText = document.querySelector('.typing-text');
+      var roles = [
+        'Full Stack Developer',
+        'LLM agents with tool use',
+        'TypeScript \u00b7 Node.js \u00b7 Python',
+        'Founder of Luna, AI for clinics',
+        'Production systems since 2023'
+      ];
+      if (typingText) {
+        if (reduceMotion) {
+          typingText.textContent = roles[0];
+        } else {
+          var roleIndex = 0, charIndex = 0, deleting = false;
+          (function type() {
+            var role = roles[roleIndex];
+            var speed;
+            if (deleting) {
+              typingText.textContent = role.substring(0, charIndex - 1);
+              charIndex--; speed = 45;
+            } else {
+              typingText.textContent = role.substring(0, charIndex + 1);
+              charIndex++; speed = 90;
+            }
+            if (!deleting && charIndex === role.length) { deleting = true; speed = 2200; }
+            else if (deleting && charIndex === 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; speed = 400; }
+            setTimeout(type, speed);
+          })();
+        }
+      }
+
+      /* ---------- Language panes + navigation ----------
+         Section IDs are suffixed per pane (#sobre-en / #sobre-pt) so the document
+         stays valid; the nav links carry the bare name and resolve to the pane
+         that is currently visible. */
+      var navLinks = document.querySelectorAll('.nav-menu .nav-link');
+
+      function activePaneSuffix() {
+        var pane = document.querySelector('.tab-pane.active');
+        return pane && pane.id === 'pills-profile' ? '-pt' : '-en';
+      }
+
+      function resolve(hash) {
+        var id = hash.replace('#', '');
+        return document.getElementById(id) || document.getElementById(id + activePaneSuffix());
+      }
+
+      function go(hash) {
+        var target = resolve(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+          target.setAttribute('tabindex', '-1');
+          target.focus({ preventScroll: true });
+        }
+      }
+
+      document.querySelectorAll('.nav-menu .nav-link, .about-buttons a, .hero-cta a[href^="#"], #arraste a').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var href = this.getAttribute('href');
+          if (href && href.charAt(0) === '#') { e.preventDefault(); go(href); }
+        });
+      });
+
+      /* Active section indicator */
+      function setActiveLink() {
+        var suffix = activePaneSuffix();
+        var y = window.pageYOffset + 120;
+        var current = null;
+        ['inicio', 'sobre', 'habilidades', 'curriculo', 'portfolio', 'contato'].forEach(function (name) {
+          var el = document.getElementById(name) || document.getElementById(name + suffix);
+          if (el && el.offsetParent !== null && y >= el.offsetTop) current = name;
+        });
+        navLinks.forEach(function (l) {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+        });
+      }
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(function () { setActiveLink(); ticking = false; });
+        }
+      }, { passive: true });
+      setActiveLink();
+
+      /* Contact forms post to a third-party endpoint. While its id is still the
+         placeholder, a form that posts into the void is worse than no form:
+         someone writes a message and believes it was sent. Swap in the address
+         itself until the id is configured; then the forms work untouched. */
+      var PLACEHOLDER = 'REPLACE_WITH_YOUR_FORM_ID';
+      var EMAIL = 'bielaugusto8@hotmail.com';
+
+      document.querySelectorAll('form.contact-form').forEach(function (f) {
+        if ((f.getAttribute('action') || '').indexOf(PLACEHOLDER) === -1) return;
+        var pt = f.closest('#contato-pt') !== null;
+        var panel = document.createElement('div');
+        panel.className = 'contact-direct';
+        panel.innerHTML =
+          '<p>' + (pt
+            ? 'Escreva direto para o meu e-mail &mdash; respondo em at&eacute; um dia &uacute;til.'
+            : 'Write to me directly &mdash; I reply within one business day.') + '</p>' +
+          '<div class="addr"><code>' + EMAIL + '</code>' +
+          '<button type="button">' + (pt ? 'Copiar' : 'Copy') + '</button></div>';
+
+        var btn = panel.querySelector('button');
+        var code = panel.querySelector('code');
+        btn.addEventListener('click', function () {
+          var done = function () {
+            btn.textContent = pt ? 'Copiado' : 'Copied';
+            setTimeout(function () { btn.textContent = pt ? 'Copiar' : 'Copy'; }, 2000);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(EMAIL).then(done, function () { select(); });
+          } else { select(); }
+          function select() {
+            var r = document.createRange();
+            r.selectNodeContents(code);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(r);
+            btn.textContent = pt ? 'Selecionado' : 'Selected';
+          }
+        });
+        f.replaceWith(panel);
+      });
+
+      /* Keep <html lang> in step with the selected language pane */
+      document.querySelectorAll('#pills-tab button[data-bs-toggle="pill"]').forEach(function (btn) {
+        btn.addEventListener('shown.bs.tab', function (e) {
+          document.documentElement.lang = e.target.id === 'pills-profile-tab' ? 'pt-BR' : 'en';
+          setActiveLink();
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>

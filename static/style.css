@@ -385,11 +385,7 @@ align-items: center;
 left: 0;
 }
 
-.row img{
-height: 40vh;
-width: 300px;
-display: flex;
-}
+/* (removida a regra global .row img que forcava 300px x 40vh em toda imagem) */
 
 
 
@@ -645,7 +641,7 @@ background-color: rgb(231, 122, 177) !important;
     padding-bottom: 1rem;
   }
 
-  h2:after {
+  h2:not(.section-title):after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -653,6 +649,11 @@ background-color: rgb(231, 122, 177) !important;
     width: 60px;
     height: 3px;
     background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .section-title:after,
+  #inicio h2:after {
+    content: none;
   }
 
 
@@ -751,112 +752,6 @@ background-color: rgb(231, 122, 177) !important;
     text-shadow: 0 0 10px #ff00ff;
   }
   
-  /* Logo JavaScript animado */
-  .js-logo-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-  }
-  
-  .js-logo {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(135deg, #f7df1e 0%, #ffff00 100%);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 50px rgba(247, 223, 30, 0.8);
-    animation: pulse 2s infinite;
-  }
-  
-  .js-text {
-    font-size: 48px;
-    font-weight: bold;
-    color: #000;
-    font-family: Arial, sans-serif;
-  }
-  
-  @keyframes pulse {
-    0%, 100% {
-      box-shadow: 0 0 30px rgba(247, 223, 30, 0.8);
-    }
-    50% {
-      box-shadow: 0 0 60px rgba(247, 223, 30, 1);
-    }
-  }
-  
-  /* Ícones orbitando */
-  .orbiting-tech {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    animation: spin 20s linear infinite;
-  }
-  
-  .tech-icon {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: rgba(102, 126, 234, 0.2);
-    border: 2px solid #667eea;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #00ffff;
-    font-size: 20px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-    animation: orbit 10s linear infinite;
-    animation-delay: var(--delay);
-  }
-  
-  .tech-icon:nth-child(1) {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .tech-icon:nth-child(2) {
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
-  
-  .tech-icon:nth-child(3) {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .tech-icon:nth-child(4) {
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-  
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes orbit {
-    0%, 100% {
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-    }
-    50% {
-      box-shadow: 0 0 40px rgba(0, 255, 255, 1);
-    }
-  }
-  
   /* Efeito de digitação */
   .typing-container {
     height: 40px;
@@ -933,6 +828,7 @@ background-color: rgb(231, 122, 177) !important;
   /* Canvas de partículas */
   #particles-canvas {
     pointer-events: none;
+    inset: 0;
   }
 
   /* Seção About melhorada */
@@ -1209,7 +1105,7 @@ background-color: rgb(231, 122, 177) !important;
   }
 
   /* Responsividade melhorada */
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .timeline::before {
       left: 30px;
     }
@@ -1235,4 +1131,268 @@ background-color: rgb(231, 122, 177) !important;
 }
 .tech-list li:last-child {
   border-bottom: none;
+}
+
+/* ==========================================================================
+   Applied-AI positioning pass
+   ========================================================================== */
+
+/* Keyboard access ---------------------------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10000;
+  padding: 12px 20px;
+  background: #0a0a0a;
+  color: #fff;
+  border-radius: 0 0 8px 0;
+  text-decoration: none;
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+#header :focus-visible,
+.featured-card :focus-visible,
+#inicio :focus-visible {
+  outline-color: #fff;
+}
+section:focus,
+section:focus-visible {
+  outline: none;
+}
+
+/* The hamburger is a real <button> now, not an <i>. */
+button.menu-mobile {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 9998;
+  height: 46px;
+  width: 46px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #6959CD;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 1024px) {
+  button.menu-mobile { display: flex; }
+}
+
+/* Hero --------------------------------------------------------------------- */
+
+.hero-tagline {
+  max-width: 48ch;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.hero-cta .btn-outline-gradient,
+.hero-cta .ms-3 { margin-left: 0 !important; }
+
+@media (max-width: 575px) {
+  section#inicio h2 { font-size: 2.6rem; }
+  .hero-cta .btn { width: 100%; }
+}
+
+/* #subtitle had an 8rem right margin that pushed it off the hero's centre. */
+section#inicio span#subtitle { margin-right: 0; }
+
+/* Skills proficiency tiers ------------------------------------------------- */
+
+.tech-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.lvl {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 2px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.lvl-1 { background: #2f3f8f; color: #fff; }
+.lvl-2 { background: #dfe4fb; color: #2f3f8f; }
+.lvl-3 { background: #e9ecef; color: #495057; }
+
+/* Project cards ------------------------------------------------------------ */
+
+.section-lead {
+  max-width: 68ch;
+  margin-bottom: 2.5rem;
+  color: #2a3140;
+  font-size: 1.05rem;
+}
+
+.card-thumb {
+  height: 120px;
+  font-size: 3rem;
+}
+.project-card .card-meta { color: #5a6475; }
+.project-card .card-text { color: #2a3140; line-height: 1.65; }
+.project-card .card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.project-card .badge.text-bg-light {
+  font-weight: 500;
+  color: #2a3140 !important;
+}
+
+.featured-card {
+  background: linear-gradient(135deg, #5a67d8 0%, #764ba2 100%);
+}
+.featured-visual {
+  background: rgba(0, 0, 0, 0.18);
+  min-height: 260px;
+  text-align: center;
+}
+.featured-icon { font-size: 5rem; opacity: 0.9; }
+.featured-visual-label {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  max-width: 24ch;
+}
+.featured-role { color: rgba(255, 255, 255, 0.85); }
+.featured-card .card-text { line-height: 1.7; }
+
+/* Contact ------------------------------------------------------------------ */
+
+.contact-info-card,
+.contact-form-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+.contact-item:last-child { margin-bottom: 0; }
+.contact-icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(102, 126, 234, 0.12);
+  color: #4c5fd7;
+  font-size: 1.2rem;
+}
+.contact-details h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 2px;
+  color: #2a3140;
+}
+.contact-details p { margin: 0; color: #5a6475; }
+.contact-details a { color: #4c5fd7; }
+
+.form-group { margin-bottom: 0; }
+.form-label { font-weight: 600; color: #2a3140; margin-bottom: 0.4rem; }
+
+.social-links-horizontal {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+/* The sidebar .social-link is white-on-dark; on a white card it needs inverting. */
+.social-link--light {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: rgba(102, 126, 234, 0.35);
+  color: #4c5fd7;
+}
+.social-link--light:hover { color: #fff; }
+
+/* Direct-contact fallback -------------------------------------------------- */
+
+/* The form posts to a third-party endpoint. Until its id is set, a form that
+   silently drops messages is worse than no form, so the page swaps in the
+   address itself rather than pretending to send. */
+.contact-direct { display: grid; gap: 1rem; }
+.contact-direct p { color: #5a6475; margin: 0; }
+.contact-direct .addr {
+  display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+  background: rgba(102, 126, 234, 0.08);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 10px; padding: 1rem 1.15rem;
+}
+.contact-direct .addr code {
+  font-size: 1rem; color: #2a3140; background: none; padding: 0;
+  overflow-wrap: anywhere; font-family: ui-monospace, Menlo, monospace;
+}
+.contact-direct .addr button {
+  margin-left: auto; font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+  background: #4c5fd7; color: #fff; border: none; border-radius: 8px; padding: 0.5rem 1rem;
+}
+.contact-direct .addr button:hover { filter: brightness(1.08); }
+
+/* Language switcher -------------------------------------------------------- */
+
+.nav-pills { margin-left: 0; }
+#pills-tab {
+  gap: 0.5rem;
+  padding: 1.25rem 1.5rem 0;
+}
+
+/* Reduced motion ----------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .floating-code,
+  #particles-canvas { display: none; }
+  [data-anime] { opacity: 1; transform: none; }
+}
+
+/* Long unbreakable strings (emails, URLs) must not push the layout wider than
+   the viewport. .info-item is a flex row, so its text child needs min-width: 0
+   before overflow-wrap can take effect. */
+.info-item > div,
+.contact-details {
+  min-width: 0;
+}
+.info-item span,
+.contact-details p,
+.contact-details a {
+  overflow-wrap: anywhere;
 }

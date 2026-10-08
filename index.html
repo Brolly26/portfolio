@@ -346,6 +346,9 @@
                   <li>Prompt engineering <span class="lvl lvl-1">Daily, in production</span></li>
                   <li>LLM agents with human-in-the-loop fallback <span class="lvl lvl-1">Daily, in production</span></li>
                   <li>Claude Code &amp; context engineering (CLAUDE.md) <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>Evals &amp; regression gates <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>Tracing &amp; structured run logs <span class="lvl lvl-1">Daily, in production</span></li>
+                  <li>Prompt-injection hardening <span class="lvl lvl-1">Daily, in production</span></li>
                   <li>OpenAI API <span class="lvl lvl-2">Shipped with</span></li>
                 </ul>
               </div>
@@ -562,8 +565,8 @@
                   <div class="card-body d-flex flex-column">
                     <h5 class="card-title fw-bold">SiteCheck AI &mdash; LLM site audit with a deterministic fallback</h5>
                     <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> Applied AI &middot; TypeScript</p>
-                    <p class="card-text flex-grow-1">Crawls a site with Puppeteer, runs it through an LLM and returns a plain-language audit as a PDF. The interesting part is what happens when the model is not available: a rule-based analyzer produces the same report shape, so the service degrades instead of failing. The LLM call is wrapped in a timeout race and a catch that classifies auth and quota errors separately. This is the repo I would walk through end to end.</p>
-                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">OpenAI API</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Express</span><span class="badge text-bg-light border me-1 mb-1">Puppeteer</span><span class="badge text-bg-light border me-1 mb-1">PDFKit</span></div>
+                    <p class="card-text flex-grow-1">Crawls a site with Puppeteer, runs it through an LLM and returns a plain-language audit as a PDF. The site being audited is attacker-controlled text, and it was reaching the prompt raw &mdash; so I hardened that structurally, then wrote the negative evals that prove it, because delimiters only hold if the model respects them. 12 fixtures, structured traces, CI gates that run offline, and a rule-based path that keeps the product working when the model is down. The suite is mutation-tested: one that only goes green proves nothing. This is the repo I would walk through end to end.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">OpenAI API</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Evals</span><span class="badge text-bg-light border me-1 mb-1">Prompt injection</span><span class="badge text-bg-light border me-1 mb-1">Tracing</span><span class="badge text-bg-light border me-1 mb-1">CI gates</span><span class="badge text-bg-light border me-1 mb-1">Puppeteer</span></div>
                     <div class="card-actions mt-auto"><a href="https://github.com/brolly26/IACheckSite" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Code</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Public repo</span></div>
                   </div>
                 </div>
@@ -861,6 +864,9 @@
                   <li>Prompt engineering <span class="lvl lvl-1">Uso diário, em produção</span></li>
                   <li>LLM agents with human-in-the-loop fallback <span class="lvl lvl-1">Uso diário, em produção</span></li>
                   <li>Claude Code &amp; context engineering (CLAUDE.md) <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>Evals &amp; regression gates <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>Tracing &amp; structured run logs <span class="lvl lvl-1">Uso diário, em produção</span></li>
+                  <li>Prompt-injection hardening <span class="lvl lvl-1">Uso diário, em produção</span></li>
                   <li>OpenAI API <span class="lvl lvl-2">Já entreguei com</span></li>
                 </ul>
               </div>
@@ -1076,8 +1082,8 @@
                   <div class="card-body d-flex flex-column">
                     <h5 class="card-title fw-bold">SiteCheck AI &mdash; auditoria de sites com LLM e fallback determinístico</h5>
                     <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> IA aplicada &middot; TypeScript</p>
-                    <p class="card-text flex-grow-1">Varre um site com Puppeteer, passa por um LLM e devolve uma auditoria em linguagem simples, em PDF. A parte interessante é o que acontece quando o modelo não está disponível: um analisador por regras produz o mesmo formato de relatório, então o serviço degrada em vez de falhar. A chamada ao LLM tem timeout via <code>Promise.race</code> e um catch que separa erro de autenticação de erro de cota. É o repositório que eu apresentaria de ponta a ponta.</p>
-                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">OpenAI API</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Express</span><span class="badge text-bg-light border me-1 mb-1">Puppeteer</span><span class="badge text-bg-light border me-1 mb-1">PDFKit</span></div>
+                    <p class="card-text flex-grow-1">Varre um site com Puppeteer, passa por um LLM e devolve uma auditoria em linguagem simples, em PDF. O site auditado é texto controlado por terceiros, e chegava cru ao prompt &mdash; endureci isso de forma estrutural e escrevi os evals negativos que provam a correção, porque delimitador só vale se o modelo respeitar. 12 fixtures, traces estruturados, gates de CI que rodam offline, e um caminho determinístico que mantém o produto de pé quando o modelo cai. A suíte é testada por mutação: uma que só fica verde não prova nada. É o repositório que eu apresentaria de ponta a ponta.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">OpenAI API</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Evals</span><span class="badge text-bg-light border me-1 mb-1">Prompt injection</span><span class="badge text-bg-light border me-1 mb-1">Tracing</span><span class="badge text-bg-light border me-1 mb-1">CI gates</span><span class="badge text-bg-light border me-1 mb-1">Puppeteer</span></div>
                     <div class="card-actions mt-auto"><a href="https://github.com/brolly26/IACheckSite" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Código</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Repo público</span></div>
                   </div>
                 </div>

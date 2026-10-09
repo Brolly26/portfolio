@@ -573,6 +573,20 @@
               </div>
               <div class="col">
                 <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#1f4037,#99f2c8);">
+                    <i class="bi bi-inboxes-fill" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">triage-agent &mdash; issue triage, instrumented first</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> Applied AI &middot; TypeScript &middot; in progress</p>
+                    <p class="card-text flex-grow-1">Classifies issues from a busy open source repo and escalates instead of drafting when it should not decide alone. The evals and the collector were built <em>before</em> the model path, which is still a skeleton: a classifier is easy to demo and hard to trust. Running it against the real GitHub API showed my own threshold escalates half of real traffic &mdash; recorded, not tuned away.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Evals</span><span class="badge text-bg-light border me-1 mb-1">Rate limits &amp; retries</span><span class="badge text-bg-light border me-1 mb-1">Prompt injection</span></div>
+                    <div class="card-actions mt-auto"><a href="https://github.com/Brolly26/triage-agent" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Code</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Public repo</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
                   <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#11998e,#38ef7d);">
                     <i class="bi bi-clipboard2-pulse-fill" aria-hidden="true"></i>
                   </div>
@@ -1086,6 +1100,20 @@
                     <p class="card-text flex-grow-1">Varre um site com Puppeteer, passa por um LLM e devolve uma auditoria em linguagem simples, em PDF. O site auditado é texto controlado por terceiros, e chegava cru ao prompt &mdash; endureci isso de forma estrutural e escrevi os evals negativos que provam a correção, porque delimitador só vale se o modelo respeitar. 12 fixtures, traces estruturados, gates de CI que rodam offline, e um caminho determinístico que mantém o produto de pé quando o modelo cai. A suíte é testada por mutação: uma que só fica verde não prova nada. É o repositório que eu apresentaria de ponta a ponta.</p>
                     <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">OpenAI API</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Evals</span><span class="badge text-bg-light border me-1 mb-1">Prompt injection</span><span class="badge text-bg-light border me-1 mb-1">Tracing</span><span class="badge text-bg-light border me-1 mb-1">CI gates</span><span class="badge text-bg-light border me-1 mb-1">Puppeteer</span></div>
                     <div class="card-actions mt-auto"><a href="https://github.com/brolly26/IACheckSite" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Código</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Repo público</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#1f4037,#99f2c8);">
+                    <i class="bi bi-inboxes-fill" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">triage-agent &mdash; triagem de issues, instrumentada antes</h5>
+                    <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> IA aplicada &middot; TypeScript &middot; em andamento</p>
+                    <p class="card-text flex-grow-1">Classifica issues de um repositório open source movimentado e escala em vez de rascunhar quando não deve decidir sozinho. Os evals e o coletor vieram <em>antes</em> do caminho do modelo, que ainda é esqueleto: classificador é fácil de demonstrar e difícil de confiar. Rodar contra a API real mostrou que meu próprio limiar escala metade do tráfego &mdash; registrado, não maquiado.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Evals</span><span class="badge text-bg-light border me-1 mb-1">Rate limits &amp; retries</span><span class="badge text-bg-light border me-1 mb-1">Prompt injection</span></div>
+                    <div class="card-actions mt-auto"><a href="https://github.com/Brolly26/triage-agent" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Código</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Repo público</span></div>
                   </div>
                 </div>
               </div>

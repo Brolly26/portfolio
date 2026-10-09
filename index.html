@@ -201,7 +201,7 @@
 
       <div class="position-absolute bottom-0 w-100 text-center pb-4" style="z-index: 10;">
         <div id="arraste" class="d-inline-flex align-items-center">
-          <i class="bi bi-arrow-down text-white pe-2 fs-2 bounce-animation" aria-hidden></i>
+          <i class="bi bi-arrow-down text-white pe-2 fs-2 bounce-animation" aria-hidden="true"></i>
           <a href="#sobre" class="text-white text-decoration-none">Explore More</a>
         </div>
       </div>
@@ -220,7 +220,7 @@
     </ul>
 
     <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <div class="tab-pane fade show active" id="pills-home" lang="en" role="tabpanel" aria-labelledby="pills-home-tab">
 
         <section class="container mt-5 about-section" id="sobre-en">
           <div class="row">
@@ -332,7 +332,7 @@
 
           <div class="container pb-5">
 
-            <h2 class="pt-5">Skills</h2>
+            <h2 class="section-title pt-5">Skills</h2>
             <p>What I reach for when building agent systems and the services around them.</p>
 
             <p class="text-muted small mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i> Grouped by how much I have actually used each one, not by how good the list looks.</p>
@@ -523,8 +523,8 @@
         <section id="portfolio-en" class="section-bg mt-5">
           <div class="container pb-5 pt-5" data-anime="left">
 
-            <h2 class="pb-4">Portfolio</h2>
-            <p class="section-lead">Five of these run in production today. Where a product sits behind a login, I say so and show the work instead of a dead link.</p>
+            <h2 class="section-title pb-4">Portfolio</h2>
+            <p class="section-lead">Most of these run in production today. Where a product sits behind a login, or the source is not mine to publish, I say so instead of offering a dead link.</p>
 
             <!-- Featured: Luna -->
             <div class="row mb-5">
@@ -623,7 +623,7 @@
                     <p class="card-meta small mb-2"><i class="bi bi-house-heart" aria-hidden="true"></i> Next.js &middot; PostHog</p>
                     <p class="card-text flex-grow-1">Next.js front and back end for an adoption platform in the Belo Horizonte region, with real listed animals and a kennel partnership. I instrumented the adoption funnel in PostHog with a custom contact-click event, so engagement is measured rather than assumed.</p>
                     <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">PostHog</span><span class="badge text-bg-light border me-1 mb-1">Product analytics</span></div>
-                    <div class="card-actions mt-auto"></div>
+                    <div class="card-actions mt-auto"><span class="badge bg-dark"><i class="bi bi-people-fill" aria-hidden="true"></i> Co-built &middot; not mine to publish</span></div>
                   </div>
                 </div>
               </div>
@@ -695,8 +695,9 @@
 
               <div class="col-md-7">
                 <div class="contact-form-card">
-                  <h4 class="mb-4">Send a message</h4>
-                  <form class="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+                  <h4 class="mb-4 contact-heading">Send a message</h4>
+                  <form class="contact-form" data-action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST"
+                    onsubmit="return false">
                     <div class="row g-3">
                       <div class="col-md-6">
                         <div class="form-group">
@@ -728,7 +729,7 @@
                     </div>
                   </form>
                   <div class="contact-alternatives mt-4 text-center">
-                    <p class="text-muted">Or reach me directly</p>
+                    <p class="text-muted contact-alt-label">Or reach me directly</p>
                     <div class="social-links-horizontal">
                       <a href="https://github.com/brolly26" target="_blank" rel="noopener noreferrer" class="social-link social-link--light" aria-label="GitHub profile"><i class="bi bi-github" aria-hidden="true"></i></a>
                       <a href="https://www.linkedin.com/in/gabriel-augusto-86aa031b2/" target="_blank" rel="noopener noreferrer" class="social-link social-link--light" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
@@ -744,7 +745,7 @@
         </section>
       </div>
 
-      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <div class="tab-pane fade" id="pills-profile" lang="pt-BR" role="tabpanel" aria-labelledby="pills-profile-tab">
 
         <section class="container mt-5 about-section" id="sobre-pt">
           <div class="row">
@@ -850,7 +851,7 @@
 
           <div class="container pb-5">
 
-            <h2 class="pt-5">Habilidades</h2>
+            <h2 class="section-title pt-5">Habilidades</h2>
             <p>O que eu uso ao construir sistemas de agentes e os serviços em volta deles.</p>
 
             <p class="text-muted small mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i> Agrupado por quanto eu realmente usei cada uma, não por quanto a lista impressiona.</p>
@@ -1040,8 +1041,8 @@
         <section id="portfolio-pt" class="section-bg mt-5">
           <div class="container pb-5 pt-5" data-anime="left">
 
-            <h2 class="pb-4">Portfólio</h2>
-            <p class="section-lead">Cinco destes estão em produção hoje. Quando o produto fica atrás de login, eu digo isso e mostro o trabalho em vez de um link morto.</p>
+            <h2 class="section-title pb-4">Portfólio</h2>
+            <p class="section-lead">A maior parte destes está em produção hoje. Quando o produto fica atrás de login, ou o código não é meu para publicar, eu digo isso em vez de oferecer um link morto.</p>
 
             <!-- Featured: Luna -->
             <div class="row mb-5">
@@ -1140,7 +1141,7 @@
                     <p class="card-meta small mb-2"><i class="bi bi-house-heart" aria-hidden="true"></i> Next.js &middot; PostHog</p>
                     <p class="card-text flex-grow-1">Front e back em Next.js para uma plataforma de adoção na região de Belo Horizonte, com animais reais cadastrados e parceria com um canil. Instrumentei o funil de adoção no PostHog com um evento próprio de clique em contato, para medir engajamento em vez de supor.</p>
                     <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">PostHog</span><span class="badge text-bg-light border me-1 mb-1">Product analytics</span></div>
-                    <div class="card-actions mt-auto"></div>
+                    <div class="card-actions mt-auto"><span class="badge bg-dark"><i class="bi bi-people-fill" aria-hidden="true"></i> Projeto em dupla &middot; publica&ccedil;&atilde;o n&atilde;o depende s&oacute; de mim</span></div>
                   </div>
                 </div>
               </div>
@@ -1222,8 +1223,9 @@
 
               <div class="col-md-7">
                 <div class="contact-form-card">
-                  <h4 class="mb-4">Envie sua Mensagem</h4>
-                  <form class="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+                  <h4 class="mb-4 contact-heading">Envie sua Mensagem</h4>
+                  <form class="contact-form" data-action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST"
+                    onsubmit="return false">
                     <div class="row g-3">
                       <div class="col-md-6">
                         <div class="form-group">
@@ -1290,7 +1292,7 @@
                   </form>
 
                   <div class="contact-alternatives mt-4 text-center">
-                    <p class="text-muted">Ou conecte-se através das redes sociais</p>
+                    <p class="text-muted contact-alt-label">Ou conecte-se através das redes sociais</p>
                     <div class="social-links-horizontal">
                       <a href="https://github.com/brolly26" target="_blank" rel="noopener noreferrer" class="social-link social-link--light" aria-label="GitHub profile">
                         <i class="bi bi-github" aria-hidden="true"></i>
@@ -1331,9 +1333,21 @@
          Capped, connection-limited and paused whenever the hero is off-screen or
          the tab is hidden. The original version ran 100 particles with shadowBlur
          and full pairwise linking forever, which cost most of the frame budget. */
+      // Everything below runs in one IIFE, so a throw here would also take out
+      // the typing headline, every in-page anchor, the lang sync and — worst —
+      // the swap that replaces the not-yet-configured contact form, putting a
+      // form that posts nowhere back in front of visitors. getContext returns
+      // null when an anti-fingerprinting extension blocks canvas or the tab has
+      // exhausted its context budget, so the decorative layer gets its own
+      // guard and its own try/catch rather than being trusted.
       var canvas = document.getElementById('particles-canvas');
-      if (canvas && !reduceMotion) {
-        var ctx = canvas.getContext('2d');
+      var ctx = null;
+      try {
+        if (canvas && !reduceMotion) ctx = canvas.getContext('2d');
+      } catch (e) {
+        ctx = null;
+      }
+      if (canvas && ctx && !reduceMotion) {
         var particles = [];
         var running = false;
         var rafId = null;
@@ -1511,8 +1525,17 @@
       var PLACEHOLDER = 'REPLACE_WITH_YOUR_FORM_ID';
       var EMAIL = 'bielaugusto8@hotmail.com';
 
+      // The endpoint lives in data-action, not action, so a form that has not
+      // been configured yet cannot submit anywhere even with JavaScript off:
+      // previously the markup was live and a visitor without JS lost their
+      // message to a 404. Configuring the id promotes it to a real action.
       document.querySelectorAll('form.contact-form').forEach(function (f) {
-        if ((f.getAttribute('action') || '').indexOf(PLACEHOLDER) === -1) return;
+        var endpoint = f.getAttribute('data-action') || '';
+        if (endpoint && endpoint.indexOf(PLACEHOLDER) === -1) {
+          f.setAttribute('action', endpoint);
+          f.removeAttribute('onsubmit');
+          return;
+        }
         var pt = f.closest('#contato-pt') !== null;
         var panel = document.createElement('div');
         panel.className = 'contact-direct';
@@ -1522,6 +1545,17 @@
             : 'Write to me directly &mdash; I reply within one business day.') + '</p>' +
           '<div class="addr"><code>' + EMAIL + '</code>' +
           '<button type="button">' + (pt ? 'Copiar' : 'Copy') + '</button></div>';
+
+        // The card's heading and its "or reach me directly" line live outside
+        // the <form>, so replacing the form alone left a heading promising a
+        // form that is not there, followed by the same invitation twice.
+        var card = f.closest('.contact-form-card');
+        if (card) {
+          var heading = card.querySelector('.contact-heading');
+          if (heading) heading.textContent = pt ? 'Fale comigo' : 'Get in touch';
+          var altLabel = card.querySelector('.contact-alt-label');
+          if (altLabel) altLabel.textContent = pt ? 'Ou me encontre em' : 'Or find me on';
+        }
 
         var btn = panel.querySelector('button');
         var code = panel.querySelector('code');
@@ -1546,11 +1580,13 @@
       });
 
       /* Keep <html lang> in step with the selected language pane */
+      // The hero, the sidebar nav, <title> and the metadata are English and sit
+      // OUTSIDE both panes. Setting <html lang> to pt-BR therefore told a
+      // screen reader to pronounce all of them as Portuguese. Each pane now
+      // carries its own lang attribute and the root stays `en`, which is what
+      // the untranslated chrome actually is.
       document.querySelectorAll('#pills-tab button[data-bs-toggle="pill"]').forEach(function (btn) {
-        btn.addEventListener('shown.bs.tab', function (e) {
-          document.documentElement.lang = e.target.id === 'pills-profile-tab' ? 'pt-BR' : 'en';
-          setActiveLink();
-        });
+        btn.addEventListener('shown.bs.tab', function () { setActiveLink(); });
       });
     })();
   </script>

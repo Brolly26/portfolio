@@ -32,6 +32,10 @@ if (menuToggle) {
   // The sidebar is off-screen below 1024px, so it must not be tabbable there.
   const syncInert = () => {
     const narrow = window.matchMedia("(max-width: 1024px)").matches;
+    // Widening past the breakpoint hides the hamburger, so an open menu would
+    // leave `menu-nav-active` — and its `overflow: hidden` — stuck on <body>
+    // with no visible control to clear it. The page then cannot be scrolled.
+    if (!narrow && body.classList.contains("menu-nav-active")) setMenu(false);
     header.toggleAttribute("inert", narrow && !body.classList.contains("menu-nav-active"));
   };
   syncInert();
@@ -48,10 +52,17 @@ if (menuToggle) {
 
 const animeItems = document.querySelectorAll("[data-anime]");
 
-if (animeItems.length) {
+if (animeItems.length) (function () {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     animeItems.forEach((el) => el.classList.add("animate"));
   } else {
+    // [data-anime] starts at opacity 0 and wraps the whole portfolio grid, so a
+    // throw here leaves the Selected-work section invisible with nothing shown
+    // to explain it. Reveal everything rather than risk that.
+    if (!("IntersectionObserver" in window)) {
+      animeItems.forEach((el) => el.classList.add("animate"));
+      return;
+    }
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -65,7 +76,7 @@ if (animeItems.length) {
     );
     animeItems.forEach((el) => io.observe(el));
   }
-}
+})();
 
 /* Footer year */
 

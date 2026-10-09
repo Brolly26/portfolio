@@ -1409,3 +1409,17 @@ section#inicio span#subtitle { margin-right: 0; }
    text column came out 254px wide and wrapped at 32 characters. Running text
    wants roughly 65. Splitting at xl leaves enough room on both sides. */
 .featured-card .card-text { max-width: 68ch; }
+
+/* WCAG 1.4.4 (Resize Text, AA): at 200% text size the two long status badges
+   kept `white-space: nowrap` and pushed the page into horizontal scrolling,
+   which the criterion forbids. Short badges still read better on one line, so
+   only the ones that carry a sentence are allowed to wrap. */
+.badge {
+  white-space: normal;
+  text-align: left;
+}
+.card-actions .badge,
+.featured-card .badge {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}

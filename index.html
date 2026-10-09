@@ -1467,8 +1467,14 @@
         if (reduceMotion) {
           typingText.textContent = roles[0];
         } else {
+          // The particle field is paused when the hero leaves the screen or the
+          // tab is hidden; this loop was not, and it mutated the DOM every 45ms
+          // for the life of the page, relaying out a hero nobody was looking
+          // at. Same two signals, same treatment.
           var roleIndex = 0, charIndex = 0, deleting = false;
-          (function type() {
+          var typingTimer = null, typingOn = false;
+
+          function tick() {
             var role = roles[roleIndex];
             var speed;
             if (deleting) {
@@ -1480,8 +1486,38 @@
             }
             if (!deleting && charIndex === role.length) { deleting = true; speed = 2200; }
             else if (deleting && charIndex === 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; speed = 400; }
-            setTimeout(type, speed);
-          })();
+            typingTimer = setTimeout(tick, speed);
+          }
+          function typingStart() { if (!typingOn) { typingOn = true; tick(); } }
+          function typingStop() {
+            typingOn = false;
+            if (typingTimer) { clearTimeout(typingTimer); typingTimer = null; }
+          }
+
+          typingStart();
+
+          var typingVisible = true;
+          document.addEventListener('visibilitychange', function () {
+            if (document.hidden) { typingStop(); } else if (typingVisible) { typingStart(); }
+          });
+          var heroEl = document.getElementById('inicio');
+          if (heroEl && 'IntersectionObserver' in window) {
+            new IntersectionObserver(function (entries) {
+              typingVisible = entries[0].isIntersecting;
+              if (typingVisible && !document.hidden) { typingStart(); } else { typingStop(); }
+            }, { threshold: 0 }).observe(heroEl);
+          }
+
+          // reduceMotion was sampled once at load. CSS can hide the canvas when
+          // the preference changes mid-session; it cannot stop a JS text
+          // mutation, so this one has to listen.
+          var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+          var onPref = function (e) {
+            if (e.matches) { typingStop(); typingText.textContent = roles[0]; }
+            else if (typingVisible && !document.hidden) { typingStart(); }
+          };
+          if (mq.addEventListener) mq.addEventListener('change', onPref);
+          else if (mq.addListener) mq.addListener(onPref);
         }
       }
 

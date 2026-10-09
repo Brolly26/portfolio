@@ -334,7 +334,10 @@ section#inicio{
     background: linear-gradient(135deg, #000000 0%, #1a0033 50%, #000000 100%);
     background-attachment: fixed;
     width: 100%;
-    height: 100vh;
+    /* height + overflow:hidden clipped the CTAs on a short laptop or a phone in
+       landscape, with no way to scroll to them. svh also accounts for the
+       mobile URL bar, which vh does not. */
+    min-height: 100svh;
     position: relative;
 }
 
@@ -350,15 +353,7 @@ font-size: 1.5rem;
 text-shadow:  4px 4px 10px black;
 
 }
-section#inicio div#arraste{
-
-    width:9rem;
-}
-section#inicio div#arraste a{
-text-decoration: none;
-color: #fff;
-
-}
+/* (bloco #arraste removido: o terceiro CTA colidia com os dois reais) */
 
 i.menu-mobile{
  position: fixed;
@@ -679,8 +674,11 @@ background-color: rgb(231, 122, 177) !important;
   /* Animações da seção hero */
   
   /* Código flutuante no fundo */
+  /* The decorative layers keep the clipping the section gave up, so the
+     floating code cannot widen the page. */
   .code-background {
     pointer-events: none;
+    overflow: hidden;
   }
   
   .floating-code {
@@ -1396,3 +1394,12 @@ section#inicio span#subtitle { margin-right: 0; }
 .contact-details a {
   overflow-wrap: anywhere;
 }
+
+/* The photo caption and the contact labels were marked up as headings for their
+   size, which made the document outline skip levels on a page that advertises
+   WCAG work. They are now a paragraph and h3s, styled to look the same. */
+.overlay-name { color: #fff; margin: 0; font-size: 1.5rem; font-weight: 600; }
+.contact-details .contact-label {
+  font-size: 0.95rem; font-weight: 700; margin: 0 0 2px; color: #2a3140;
+}
+.contact-details .contact-label:after { content: none; }

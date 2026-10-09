@@ -1403,3 +1403,9 @@ section#inicio span#subtitle { margin-right: 0; }
   font-size: 0.95rem; font-weight: 700; margin: 0 0 2px; color: #2a3140;
 }
 .contact-details .contact-label:after { content: none; }
+
+/* The featured card split in two at the lg breakpoint, which is measured on
+   the viewport — but the fixed sidebar takes 300px of it, so at 1034px the
+   text column came out 254px wide and wrapped at 32 characters. Running text
+   wants roughly 65. Splitting at xl leaves enough room on both sides. */
+.featured-card .card-text { max-width: 68ch; }

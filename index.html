@@ -5,19 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gabriel Augusto — Full Stack Developer · Applied AI</title>
-  <meta name="description" content="Full stack developer with 3+ years shipping production software in TypeScript and Node.js, now focused on applied AI. Builds LLM agents with tool use on the Claude and OpenAI APIs, running in production over queue-based integrations.">
+  <meta name="description" content="Full stack developer with 3+ years shipping production software in TypeScript and Node.js, now focused on applied AI. Builds LLM agents with tool use on the Claude and OpenAI APIs, over queue-based integrations, and measures them with evals.">
   <link rel="canonical" href="https://brolly26.github.io/portfolio/">
 
   <!-- Open Graph / LinkedIn sharing -->
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://brolly26.github.io/portfolio/">
   <meta property="og:title" content="Gabriel Augusto — Full Stack Developer · Applied AI">
-  <meta property="og:description" content="LLM agents with tool use in production. Built and runs Luna, a multi-tenant WhatsApp assistant on the Claude API. TypeScript, Node.js, Python, AWS.">
+  <meta property="og:description" content="LLM agents with tool use, evals and prompt-injection tests. Built Luna, a solo multi-tenant WhatsApp assistant on the Claude API. TypeScript, Node.js, Python, AWS.">
   <meta property="og:image" content="https://brolly26.github.io/portfolio/static/imgs/gabriel-profile.jpg">
   <meta property="og:image:alt" content="Gabriel Augusto">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gabriel Augusto — Full Stack Developer · Applied AI">
-  <meta name="twitter:description" content="LLM agents with tool use in production. Built and runs Luna, a multi-tenant WhatsApp assistant on the Claude API.">
+  <meta name="twitter:description" content="LLM agents with tool use, evals and prompt-injection tests. Built Luna, a solo multi-tenant WhatsApp assistant on the Claude API.">
   <meta name="twitter:image" content="https://brolly26.github.io/portfolio/static/imgs/gabriel-profile.jpg">
 
   <link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
@@ -175,7 +175,7 @@
         </div>
 
         <p class="hero-tagline text-white-50 mt-3 mb-0">
-          I build LLM agents that run in production &mdash; tool use, queues, retries and a human fallback.
+          I build LLM agents with tool use, queues, retries and a human fallback, and measure them with evals.
         </p>
 
         <!-- Tags de tecnologia -->
@@ -244,7 +244,7 @@
                 </h3>
                 <p class="about-description">
                   Three years shipping production software in TypeScript and Node.js, now building LLM agents.
-                  I built and run <strong>Luna</strong>, a multi-tenant WhatsApp assistant whose agents use the
+                  I built <strong>Luna</strong>, a solo, not commercially launched, multi-tenant WhatsApp assistant whose agents use the
                   Claude API with tool use to schedule appointments, answer FAQs and qualify leads for clinics &mdash;
                   with a human fallback when the model should not answer alone.
                 </p>
@@ -534,8 +534,8 @@
                       <div class="card-body text-white p-4 p-lg-5">
                         <span class="badge bg-warning text-dark mb-3">Featured</span>
                         <h3 class="card-title fw-bold mb-2">Luna &mdash; LLM agents for clinic customer service on WhatsApp</h3>
-                        <p class="featured-role mb-3"><i class="bi bi-person-badge" aria-hidden="true"></i> Founder &amp; Developer &middot; Live, v1.0</p>
-                        <p class="card-text mb-4">Multi-tenant assistant that answers, schedules and qualifies leads for dental and aesthetic clinics. The agents run on the Claude API with <strong>tool use</strong> to book appointments, answer FAQs and hand the conversation to a human when the model should not answer alone. I architected per-tenant data isolation and a BullMQ + Redis pipeline over the WhatsApp Cloud API, with retry logic for asynchronous workloads, and shipped the whole thing solo: Node.js backend, APIs, database, AWS infrastructure, billing and a Next.js dashboard. I ran the discovery interviews with clinic owners myself to validate the problem and set pricing.</p>
+                        <p class="featured-role mb-3"><i class="bi bi-person-badge" aria-hidden="true"></i> Solo project &middot; built end to end</p>
+                        <p class="card-text mb-4">Multi-tenant assistant that answers, schedules and qualifies leads for dental and aesthetic clinics. The agents run on the Claude API with <strong>tool use</strong> to book appointments, answer FAQs and hand the conversation to a human when the model should not answer alone. I architected per-tenant data isolation and a BullMQ + Redis pipeline over the WhatsApp Cloud API, with retry logic for asynchronous workloads, and shipped the whole thing solo: Node.js backend, APIs, database, AWS infrastructure, billing and a Next.js dashboard. I tested the problem myself with a mystery-patient check on clinics in Belo Horizonte. It never got paying customers.</p>
                         <div class="mb-4"><span class="badge bg-light text-dark me-1 mb-1">Claude API</span><span class="badge bg-light text-dark me-1 mb-1">Tool use</span><span class="badge bg-light text-dark me-1 mb-1">Node.js</span><span class="badge bg-light text-dark me-1 mb-1">TypeScript</span><span class="badge bg-light text-dark me-1 mb-1">Next.js</span><span class="badge bg-light text-dark me-1 mb-1">BullMQ</span><span class="badge bg-light text-dark me-1 mb-1">Redis</span><span class="badge bg-light text-dark me-1 mb-1">Supabase</span><span class="badge bg-light text-dark me-1 mb-1">WhatsApp Cloud API</span><span class="badge bg-light text-dark me-1 mb-1">AWS</span></div>
                         <div class="d-flex gap-2 flex-wrap align-items-center">
                           <a href="https://luna-dashboard-flame.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> luna-dashboard</a>
@@ -783,7 +783,7 @@
                 </h3>
                 <p class="about-description">
                   Três anos entregando software em produção com TypeScript e Node.js, hoje construindo agentes de LLM.
-                  Criei e opero a <strong>Luna</strong>, um assistente de WhatsApp multi-tenant cujos agentes usam a
+                  Criei a <strong>Luna</strong>, um projeto solo, sem lançamento comercial: um assistente de WhatsApp multi-tenant cujos agentes usam a
                   Claude API com <em>tool use</em> para agendar consultas, responder dúvidas e qualificar leads de
                   clínicas &mdash; com repasse para atendimento humano quando o modelo não deve responder sozinho.
                 </p>
@@ -1066,8 +1066,8 @@
                       <div class="card-body text-white p-4 p-lg-5">
                         <span class="badge bg-warning text-dark mb-3">Destaque</span>
                         <h3 class="card-title fw-bold mb-2">Luna &mdash; agentes de LLM para atendimento de clínicas no WhatsApp</h3>
-                        <p class="featured-role mb-3"><i class="bi bi-person-badge" aria-hidden="true"></i> Founder &amp; Developer &middot; No ar, v1.0</p>
-                        <p class="card-text mb-4">Assistente multi-tenant que responde, agenda e qualifica leads para clínicas odontológicas e estéticas. Os agentes rodam sobre a Claude API com <strong>tool use</strong> para marcar consultas, responder dúvidas e repassar a conversa para um humano quando o modelo não deve responder sozinho. Arquitetei o isolamento de dados por tenant e um pipeline BullMQ + Redis sobre a WhatsApp Cloud API, com retry para cargas assíncronas, e entreguei tudo sozinho: backend Node.js, APIs, banco, infraestrutura AWS, cobrança e um dashboard em Next.js. Conduzi as entrevistas de descoberta com donos de clínica para validar o problema e definir preço.</p>
+                        <p class="featured-role mb-3"><i class="bi bi-person-badge" aria-hidden="true"></i> Projeto solo &middot; feito de ponta a ponta</p>
+                        <p class="card-text mb-4">Assistente multi-tenant que responde, agenda e qualifica leads para clínicas odontológicas e estéticas. Os agentes rodam sobre a Claude API com <strong>tool use</strong> para marcar consultas, responder dúvidas e repassar a conversa para um humano quando o modelo não deve responder sozinho. Arquitetei o isolamento de dados por tenant e um pipeline BullMQ + Redis sobre a WhatsApp Cloud API, com retry para cargas assíncronas, e entreguei tudo sozinho: backend Node.js, APIs, banco, infraestrutura AWS, cobrança e um dashboard em Next.js. Testei o problema eu mesmo, com uma checagem de paciente oculto em clínicas de Belo Horizonte. Ela nunca teve clientes pagantes.</p>
                         <div class="mb-4"><span class="badge bg-light text-dark me-1 mb-1">Claude API</span><span class="badge bg-light text-dark me-1 mb-1">Tool use</span><span class="badge bg-light text-dark me-1 mb-1">Node.js</span><span class="badge bg-light text-dark me-1 mb-1">TypeScript</span><span class="badge bg-light text-dark me-1 mb-1">Next.js</span><span class="badge bg-light text-dark me-1 mb-1">BullMQ</span><span class="badge bg-light text-dark me-1 mb-1">Redis</span><span class="badge bg-light text-dark me-1 mb-1">Supabase</span><span class="badge bg-light text-dark me-1 mb-1">WhatsApp Cloud API</span><span class="badge bg-light text-dark me-1 mb-1">AWS</span></div>
                         <div class="d-flex gap-2 flex-wrap align-items-center">
                           <a href="https://luna-dashboard-flame.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-light"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> luna-dashboard</a>
@@ -1460,7 +1460,7 @@
         'Full Stack Developer',
         'LLM agents with tool use',
         'TypeScript \u00b7 Node.js \u00b7 Python',
-        'Founder of Luna, AI for clinics',
+        'Evals for LLM features',
         'Production systems since 2023'
       ];
       if (typingText) {

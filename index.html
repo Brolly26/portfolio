@@ -193,7 +193,7 @@
           <a href="#portfolio" class="btn btn-gradient btn-lg">
             <i class="bi bi-collection" aria-hidden="true"></i> View projects
           </a>
-          <a href="static/imgs/GabrielAugusto.pdf" class="btn btn-outline-light btn-lg ms-3" download>
+          <a href="static/imgs/GabrielAugusto-EN.pdf" class="btn btn-outline-light btn-lg ms-3" download>
             <i class="bi bi-download" aria-hidden="true"></i> Download CV
           </a>
         </div>
@@ -420,7 +420,7 @@
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                  <span class="timeline-date">March 2025 - Present</span>
+                  <span class="timeline-date">April 2025 - October 2026</span>
                   <h4><i class="bi bi-briefcase"></i> Full Stack Developer</h4>
                   <h5 class="text-primary">Clube Certo</h5>
                   <p>Build and maintain Node.js and TypeScript services for multi-tenant white-label products, with Redis caching and asynchronous integrations on BullMQ and AWS SQS. Eliminated critical N+1 queries across MySQL/Sequelize endpoints, cutting response times on core API routes. I manage the AWS infrastructure (EC2, S3, CloudFront, Amplify) and take part in monitoring and incident response for production workloads.</p>
@@ -506,7 +506,7 @@
             </div>
 
             <div class="text-center mt-5">
-              <a href="static/imgs/GabrielAugusto.pdf" class="btn btn-gradient">
+              <a href="static/imgs/GabrielAugusto-EN.pdf" class="btn btn-gradient">
                 <i class="bi bi-download" aria-hidden="true"></i> Download CV
               </a>
             </div>
@@ -571,10 +571,10 @@
                   </div>
                   <div class="card-body d-flex flex-column">
                     <h4 class="card-title fw-bold">triage-agent &mdash; issue triage, instrumented first</h4>
-                    <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> Applied AI &middot; TypeScript &middot; in progress</p>
-                    <p class="card-text flex-grow-1">Classifies issues from a busy open source repo and escalates instead of drafting when it should not decide alone. The evals and the collector were built <em>before</em> the model path, which is still a skeleton: a classifier is easy to demo and hard to trust. Running it against the real GitHub API showed my own threshold escalates half of real traffic &mdash; recorded, not tuned away.</p>
-                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Evals</span><span class="badge text-bg-light border me-1 mb-1">Rate limits &amp; retries</span><span class="badge text-bg-light border me-1 mb-1">Prompt injection</span></div>
-                    <div class="card-actions mt-auto"><a href="https://github.com/Brolly26/triage-agent" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Code</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Public repo</span></div>
+                    <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> Applied AI &middot; TypeScript &middot; CLI + GitHub Action</p>
+                    <p class="card-text flex-grow-1">Classifies GitHub issues and escalates to a human when it should not decide alone. Scored against the labels maintainers applied (stripped before classifying) on 49 real issues: the rules rarely answered but were right when they did; Claude answered almost everything and was wrong on about one in eight of what it answered alone. On 81 more, its stated confidence tracked its accuracy, and my 0.6 escalation threshold never fired. Recorded, not tuned. A CLI, plus a GitHub Action that only adds labels.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Claude API</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Evals</span><span class="badge text-bg-light border me-1 mb-1">Calibration</span><span class="badge text-bg-light border me-1 mb-1">Prompt injection</span></div>
+                    <div class="card-actions mt-auto"><a href="https://github.com/Brolly26/triage-agent" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Code</a> <a href="https://brolly26.github.io/triage-agent/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark"><i class="bi bi-bar-chart-fill" aria-hidden="true"></i> Results</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Public repo</span></div>
                   </div>
                 </div>
               </div>
@@ -599,7 +599,7 @@
                   </div>
                   <div class="card-body d-flex flex-column">
                     <h4 class="card-title fw-bold">Clube Certo &mdash; multi-tenant white-label platform</h4>
-                    <p class="card-meta small mb-2"><i class="bi bi-stack" aria-hidden="true"></i> Full Stack &middot; Mar 2025 &ndash; Present</p>
+                    <p class="card-meta small mb-2"><i class="bi bi-stack" aria-hidden="true"></i> Full Stack &middot; Apr 2025 &ndash; Oct 2026</p>
                     <p class="card-text flex-grow-1">Node.js and TypeScript services for multi-tenant white-label products, with Redis caching and asynchronous integrations on BullMQ and AWS SQS. Eliminated critical N+1 queries across MySQL/Sequelize endpoints, cutting response times on core API routes. I manage the AWS infrastructure and take part in monitoring and incident response for production workloads.</p>
                     <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Node.js</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">BullMQ</span><span class="badge text-bg-light border me-1 mb-1">AWS SQS</span><span class="badge text-bg-light border me-1 mb-1">Redis</span><span class="badge text-bg-light border me-1 mb-1">MySQL</span><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">Vue 3</span></div>
                     <div class="card-actions mt-auto"><span class="badge bg-dark"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i> Production &middot; Confidential</span></div>
@@ -952,7 +952,7 @@
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                  <span class="timeline-date">Março 2025 - Presente</span>
+                  <span class="timeline-date">Abril 2025 - Outubro 2026</span>
                   <h4><i class="bi bi-briefcase"></i> Desenvolvedor Full Stack</h4>
                   <h5 class="text-primary">Clube Certo</h5>
                   <p>Construo e mantenho serviços em Node.js e TypeScript para produtos white-label multi-tenant, com cache em Redis e integrações assíncronas em BullMQ e AWS SQS. Eliminei queries N+1 críticas em endpoints MySQL/Sequelize, reduzindo o tempo de resposta em rotas centrais da API. Cuido da infraestrutura AWS (EC2, S3, CloudFront, Amplify) e participo do monitoramento e da resposta a incidentes em produção.</p>
@@ -1103,10 +1103,10 @@
                   </div>
                   <div class="card-body d-flex flex-column">
                     <h4 class="card-title fw-bold">triage-agent &mdash; triagem de issues, instrumentada antes</h4>
-                    <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> IA aplicada &middot; TypeScript &middot; em andamento</p>
-                    <p class="card-text flex-grow-1">Classifica issues de um repositório open source movimentado e escala em vez de rascunhar quando não deve decidir sozinho. Os evals e o coletor vieram <em>antes</em> do caminho do modelo, que ainda é esqueleto: classificador é fácil de demonstrar e difícil de confiar. Rodar contra a API real mostrou que meu próprio limiar escala metade do tráfego &mdash; registrado, não maquiado.</p>
-                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Evals</span><span class="badge text-bg-light border me-1 mb-1">Rate limits &amp; retries</span><span class="badge text-bg-light border me-1 mb-1">Prompt injection</span></div>
-                    <div class="card-actions mt-auto"><a href="https://github.com/Brolly26/triage-agent" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Código</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Repo público</span></div>
+                    <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> IA aplicada &middot; TypeScript &middot; CLI + GitHub Action</p>
+                    <p class="card-text flex-grow-1">Classifica issues do GitHub e escala para um humano quando não deve decidir sozinho. Avaliado contra os rótulos que os mantenedores aplicaram (removidos antes de classificar) em 49 issues reais: as regras raramente respondiam, mas acertavam quando respondiam; o Claude respondeu quase tudo e errou cerca de uma em oito das que respondeu sozinho. Em outras 81, a confiança declarada acompanhou o acerto, e meu limiar de escalação de 0,6 nunca disparou. Registrado, não ajustado. Uma CLI, mais uma GitHub Action que só adiciona labels.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Claude API</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Evals</span><span class="badge text-bg-light border me-1 mb-1">Calibration</span><span class="badge text-bg-light border me-1 mb-1">Prompt injection</span></div>
+                    <div class="card-actions mt-auto"><a href="https://github.com/Brolly26/triage-agent" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Código</a> <a href="https://brolly26.github.io/triage-agent/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark"><i class="bi bi-bar-chart-fill" aria-hidden="true"></i> Resultados</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Repo público</span></div>
                   </div>
                 </div>
               </div>
@@ -1131,7 +1131,7 @@
                   </div>
                   <div class="card-body d-flex flex-column">
                     <h4 class="card-title fw-bold">Clube Certo &mdash; plataforma white-label multi-tenant</h4>
-                    <p class="card-meta small mb-2"><i class="bi bi-stack" aria-hidden="true"></i> Full Stack &middot; Mar 2025 &ndash; Presente</p>
+                    <p class="card-meta small mb-2"><i class="bi bi-stack" aria-hidden="true"></i> Full Stack &middot; Abr 2025 &ndash; Out 2026</p>
                     <p class="card-text flex-grow-1">Serviços em Node.js e TypeScript para produtos white-label multi-tenant, com cache em Redis e integrações assíncronas em BullMQ e AWS SQS. Eliminei queries N+1 críticas em endpoints MySQL/Sequelize, reduzindo o tempo de resposta em rotas centrais da API. Cuido da infraestrutura AWS e participo do monitoramento e da resposta a incidentes das cargas em produção.</p>
                     <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Node.js</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">BullMQ</span><span class="badge text-bg-light border me-1 mb-1">AWS SQS</span><span class="badge text-bg-light border me-1 mb-1">Redis</span><span class="badge text-bg-light border me-1 mb-1">MySQL</span><span class="badge text-bg-light border me-1 mb-1">Next.js</span><span class="badge text-bg-light border me-1 mb-1">Vue 3</span></div>
                     <div class="card-actions mt-auto"><span class="badge bg-dark"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i> Production &middot; Confidential</span></div>

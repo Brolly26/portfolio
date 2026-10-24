@@ -193,8 +193,8 @@
           <a href="#portfolio" class="btn btn-gradient btn-lg">
             <i class="bi bi-collection" aria-hidden="true"></i> View projects
           </a>
-          <a href="static/imgs/GabrielAugusto-EN.pdf" class="btn btn-outline-light btn-lg ms-3" download>
-            <i class="bi bi-download" aria-hidden="true"></i> Download CV
+          <a href="static/imgs/GabrielAugusto-EN.pdf" class="btn btn-outline-light btn-lg ms-3" id="hero-cv" download>
+            <i class="bi bi-download" aria-hidden="true"></i> <span id="hero-cv-label">Download CV</span>
           </a>
         </div>
       </div>
@@ -506,7 +506,7 @@
             </div>
 
             <div class="text-center mt-5">
-              <a href="static/imgs/GabrielAugusto-EN.pdf" class="btn btn-gradient">
+              <a href="static/imgs/GabrielAugusto-EN.pdf" class="btn btn-gradient" download>
                 <i class="bi bi-download" aria-hidden="true"></i> Download CV
               </a>
             </div>
@@ -575,6 +575,20 @@
                     <p class="card-text flex-grow-1">Classifies GitHub issues and escalates to a human when it should not decide alone. Scored against the labels maintainers applied (stripped before classifying) on 49 real issues: the rules rarely answered but were right when they did; Claude answered almost everything and was wrong on about one in eight of what it answered alone. On 81 more, its stated confidence tracked its accuracy, and my 0.6 escalation threshold never fired. Recorded, not tuned. A CLI, plus a GitHub Action that only adds labels.</p>
                     <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Claude API</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Evals</span><span class="badge text-bg-light border me-1 mb-1">Calibration</span><span class="badge text-bg-light border me-1 mb-1">Prompt injection</span></div>
                     <div class="card-actions mt-auto"><a href="https://github.com/Brolly26/triage-agent" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Code</a> <a href="https://brolly26.github.io/triage-agent/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark"><i class="bi bi-bar-chart-fill" aria-hidden="true"></i> Results</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Public repo</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#3a1c71,#d76d77);">
+                    <i class="bi bi-lightbulb-fill" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h4 class="card-title fw-bold">Signal &mdash; feature requests into reviewable decisions</h4>
+                    <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> Applied AI &middot; Python + TypeScript &middot; FastAPI + Next.js</p>
+                    <p class="card-text flex-grow-1">Reads customer feature requests, works out the problem behind each one, searches existing requests through a single read-only tool and proposes related requests with the evidence for each, for a product manager to approve or reject. The model has no write access, and every reference it returns is checked against data the backend fetched itself. The first run against the real model failed on a schema the API rejected, which no scripted test could catch; the fix and the reason are in the README.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Claude API</span><span class="badge text-bg-light border me-1 mb-1">Tool calling</span><span class="badge text-bg-light border me-1 mb-1">Python</span><span class="badge text-bg-light border me-1 mb-1">FastAPI</span><span class="badge text-bg-light border me-1 mb-1">PostgreSQL</span><span class="badge text-bg-light border me-1 mb-1">Next.js</span></div>
+                    <div class="card-actions mt-auto"><a href="https://github.com/Brolly26/signal" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Code</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Public repo</span></div>
                   </div>
                 </div>
               </div>
@@ -1038,7 +1052,7 @@
             </div>
             
             <div class="text-center mt-5">
-              <a href="static/imgs/GabrielAugusto.pdf" class="btn btn-gradient">
+              <a href="static/imgs/GabrielAugusto-PT.pdf" class="btn btn-gradient" download>
                 <i class="bi bi-download"></i> Baixar CV
               </a>
             </div>
@@ -1107,6 +1121,20 @@
                     <p class="card-text flex-grow-1">Classifica issues do GitHub e escala para um humano quando não deve decidir sozinho. Avaliado contra os rótulos que os mantenedores aplicaram (removidos antes de classificar) em 49 issues reais: as regras raramente respondiam, mas acertavam quando respondiam; o Claude respondeu quase tudo e errou cerca de uma em oito das que respondeu sozinho. Em outras 81, a confiança declarada acompanhou o acerto, e meu limiar de escalação de 0,6 nunca disparou. Registrado, não ajustado. Uma CLI, mais uma GitHub Action que só adiciona labels.</p>
                     <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Claude API</span><span class="badge text-bg-light border me-1 mb-1">TypeScript</span><span class="badge text-bg-light border me-1 mb-1">Evals</span><span class="badge text-bg-light border me-1 mb-1">Calibration</span><span class="badge text-bg-light border me-1 mb-1">Prompt injection</span></div>
                     <div class="card-actions mt-auto"><a href="https://github.com/Brolly26/triage-agent" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Código</a> <a href="https://brolly26.github.io/triage-agent/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark"><i class="bi bi-bar-chart-fill" aria-hidden="true"></i> Resultados</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Repo público</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0 project-card">
+                  <div class="card-thumb d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg,#3a1c71,#d76d77);">
+                    <i class="bi bi-lightbulb-fill" aria-hidden="true"></i>
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h4 class="card-title fw-bold">Signal &mdash; pedidos de feature em decisões revisáveis</h4>
+                    <p class="card-meta small mb-2"><i class="bi bi-braces-asterisk" aria-hidden="true"></i> IA aplicada &middot; Python + TypeScript &middot; FastAPI + Next.js</p>
+                    <p class="card-text flex-grow-1">Lê pedidos de feature de clientes, entende o problema por trás de cada um, busca pedidos existentes com uma única ferramenta somente leitura e propõe relações com a evidência de cada uma, para um product manager aprovar ou rejeitar. O modelo não tem acesso de escrita, e toda referência que ele devolve é conferida com dados que o próprio backend buscou. A primeira execução com o modelo real falhou num schema que a API rejeitou, algo que nenhum teste com modelo simulado pegaria; a correção e o motivo estão no README.</p>
+                    <div class="mb-3"><span class="badge text-bg-light border me-1 mb-1">Claude API</span><span class="badge text-bg-light border me-1 mb-1">Tool calling</span><span class="badge text-bg-light border me-1 mb-1">Python</span><span class="badge text-bg-light border me-1 mb-1">FastAPI</span><span class="badge text-bg-light border me-1 mb-1">PostgreSQL</span><span class="badge text-bg-light border me-1 mb-1">Next.js</span></div>
+                    <div class="card-actions mt-auto"><a href="https://github.com/Brolly26/signal" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark"><i class="bi bi-github" aria-hidden="true"></i> Código</a> <span class="badge bg-success"><i class="bi bi-unlock-fill" aria-hidden="true"></i> Repo público</span></div>
                   </div>
                 </div>
               </div>
@@ -1526,6 +1554,16 @@
          stays valid; the nav links carry the bare name and resolve to the pane
          that is currently visible. */
       var navLinks = document.querySelectorAll('.nav-menu .nav-link');
+
+      var heroCv = document.getElementById('hero-cv');
+      var heroCvLabel = document.getElementById('hero-cv-label');
+      document.querySelectorAll('#pills-tab [data-bs-toggle="pill"]').forEach(function (tab) {
+        tab.addEventListener('shown.bs.tab', function () {
+          var pt = this.id === 'pills-profile-tab';
+          if (heroCv) heroCv.setAttribute('href', pt ? 'static/imgs/GabrielAugusto-PT.pdf' : 'static/imgs/GabrielAugusto-EN.pdf');
+          if (heroCvLabel) heroCvLabel.textContent = pt ? 'Baixar CV' : 'Download CV';
+        });
+      });
 
       function activePaneSuffix() {
         var pane = document.querySelector('.tab-pane.active');
